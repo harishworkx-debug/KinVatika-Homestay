@@ -133,34 +133,22 @@ function Hero() {
         className="relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-10"
       >
         <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.3 }}
           className="eyebrow text-gold"
         >
           Village Shudharang · Kalpa · Kinnaur
         </motion.p>
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="mt-5 max-w-4xl text-5xl leading-[1.02] text-snow text-balance-tight sm:text-7xl lg:text-[5.2rem]"
         >
           Wake Up to the Sacred Kinnaur Kailash Peaks.
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.65 }}
           className="mt-6 max-w-xl text-base leading-relaxed text-snow/85 sm:text-lg"
         >
           A peaceful Himalayan home wrapped in apple orchards — 360° mountain views, warm wooden
           rooms and food cooked the way a Kinnauri family cooks for its own.
         </motion.p>
         <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
           className="mt-9 flex flex-wrap gap-3"
         >
           <a
