@@ -78,9 +78,9 @@
   --shadow-lift: 0 8px 20px oklch(0.24 0.012 90 / 0.1), 0 30px 70px oklch(0.24 0.012 90 / 0.16);
   --gradient-overlay: linear-gradient(
     to bottom,
-    oklch(0.24 0.012 90 / 0.55),
-    oklch(0.24 0.012 90 / 0.25) 45%,
-    oklch(0.2 0.02 150 / 0.72)
+    oklch(0.24 0.012 90 / 0.6),
+    oklch(0.24 0.012 90 / 0.5) 45%,
+    oklch(0.2 0.02 150 / 0.85)
   );
 }
 
