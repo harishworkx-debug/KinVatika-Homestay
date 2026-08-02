@@ -100,7 +100,6 @@ function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
-  const fade = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <section ref={ref} className="relative h-[100svh] min-h-[600px] overflow-hidden">
@@ -131,7 +130,6 @@ function Hero() {
       <div className="hero-overlay absolute inset-0" />
 
       <motion.div
-        style={{ opacity: fade }}
         className="relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-10"
       >
         <motion.p
