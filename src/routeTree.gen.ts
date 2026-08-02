@@ -12,8 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AttractionsRouteImport } from './routes/attractions'
+import { Route as BookRouteImport } from './routes/book'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DiningRouteImport } from './routes/dining'
 import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RoomsRouteImport } from './routes/rooms'
 
 const IndexRoute = IndexRouteImport.update({
@@ -31,6 +35,16 @@ const AttractionsRoute = AttractionsRouteImport.update({
   path: '/attractions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DiningRoute = DiningRouteImport.update({
   id: '/dining',
   path: '/dining',
@@ -39,6 +53,16 @@ const DiningRoute = DiningRouteImport.update({
 const ExperienceRoute = ExperienceRouteImport.update({
   id: '/experience',
   path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RoomsRoute = RoomsRouteImport.update({
@@ -51,16 +75,24 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/book': typeof BookRoute
+  '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/experience': typeof ExperienceRoute
+  '/gallery': typeof GalleryRoute
+  '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/book': typeof BookRoute
+  '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/experience': typeof ExperienceRoute
+  '/gallery': typeof GalleryRoute
+  '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRoute
 }
 export interface FileRoutesById {
@@ -68,23 +100,50 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/book': typeof BookRoute
+  '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/experience': typeof ExperienceRoute
+  '/gallery': typeof GalleryRoute
+  '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/attractions' | '/dining' | '/experience' | '/rooms'
+    | '/'
+    | '/about'
+    | '/attractions'
+    | '/book'
+    | '/contact'
+    | '/dining'
+    | '/experience'
+    | '/gallery'
+    | '/reviews'
+    | '/rooms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/attractions' | '/dining' | '/experience' | '/rooms'
+  to:
+    | '/'
+    | '/about'
+    | '/attractions'
+    | '/book'
+    | '/contact'
+    | '/dining'
+    | '/experience'
+    | '/gallery'
+    | '/reviews'
+    | '/rooms'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/attractions'
+    | '/book'
+    | '/contact'
     | '/dining'
     | '/experience'
+    | '/gallery'
+    | '/reviews'
     | '/rooms'
   fileRoutesById: FileRoutesById
 }
@@ -92,8 +151,12 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AttractionsRoute: typeof AttractionsRoute
+  BookRoute: typeof BookRoute
+  ContactRoute: typeof ContactRoute
   DiningRoute: typeof DiningRoute
   ExperienceRoute: typeof ExperienceRoute
+  GalleryRoute: typeof GalleryRoute
+  ReviewsRoute: typeof ReviewsRoute
   RoomsRoute: typeof RoomsRoute
 }
 
@@ -120,6 +183,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AttractionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dining': {
       id: '/dining'
       path: '/dining'
@@ -132,6 +209,20 @@ declare module '@tanstack/react-router' {
       path: '/experience'
       fullPath: '/experience'
       preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rooms': {
@@ -148,10 +239,24 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AttractionsRoute: AttractionsRoute,
+  BookRoute: BookRoute,
+  ContactRoute: ContactRoute,
   DiningRoute: DiningRoute,
   ExperienceRoute: ExperienceRoute,
+  GalleryRoute: GalleryRoute,
+  ReviewsRoute: ReviewsRoute,
   RoomsRoute: RoomsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
