@@ -77,21 +77,61 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "KinVatika Homestay | Boutique Stay in Kalpa, Kinnaur" },
+      {
+        name: "description",
+        content:
+          "KinVatika Homestay in Kalpa, Kinnaur — boutique mountain rooms with 360° Kinnaur Kailash views, homemade Himachali food and warm family hospitality.",
+      },
+      { name: "author", content: "KinVatika Homestay" },
+      { property: "og:site_name", content: "KinVatika Homestay" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "theme-color", content: "#1f4034" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Karla:wght@300;400;500;600&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Hotel",
+          name: "KinVatika Homestay",
+          description:
+            "Boutique family homestay in Kalpa, Kinnaur with 360° Kinnaur Kailash views, private balconies and homemade Himachali meals.",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Village Shudharang, Post Office & Tehsil Reckong Peo",
+            addressLocality: "Kalpa",
+            addressRegion: "Himachal Pradesh",
+            postalCode: "172107",
+            addressCountry: "IN",
+          },
+          geo: { "@type": "GeoCoordinates", latitude: 31.5292, longitude: 78.2668 },
+          telephone: "+919953493171",
+          priceRange: "₹₹",
+          starRating: { "@type": "Rating", ratingValue: "4.9" },
+          amenityFeature: [
+            "Mountain View",
+            "Free Wi-Fi",
+            "Free Parking",
+            "Family Rooms",
+            "Heating",
+            "Pet Friendly",
+            "Garden",
+            "Terrace",
+          ].map((n) => ({ "@type": "LocationFeatureSpecification", name: n, value: true })),
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +159,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteLayout>
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+      </SiteLayout>
     </QueryClientProvider>
   );
 }
+
