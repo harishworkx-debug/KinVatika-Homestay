@@ -5,8 +5,8 @@ import { Reveal } from "./Reveal";
 
 export function CtaBand({
   title = "Plan Your Kinnaur Trip",
-  text = "Rooms at KinVatika fill up fast during apple season and snowfall. Message us for today's best direct price.",
-  message = "Hello KinVatika Homestay! Please share your best price and availability.",
+  text = "Message KinVatika for current room availability, direct rates and help planning your stay.",
+  message = "Hello KinVatika Homestay! Please share your current direct rate and availability.",
 }: {
   title?: string;
   text?: string;

@@ -11,7 +11,7 @@ export function Footer() {
           <p className="font-display text-3xl text-snow">KinVatika Homestay</p>
           <p className="mt-4 max-w-md text-sm leading-relaxed">
             A peaceful Himalayan home in Village Shudharang, Kalpa — wrapped in apple orchards with
-            360° views of the sacred Kinnaur Kailash range.
+            panoramic views towards the sacred Kinnaur Kailash range when visibility is clear.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a

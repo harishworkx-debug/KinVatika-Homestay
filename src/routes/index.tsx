@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ChevronDown, Phone, MapPin, Star } from "lucide-react";
+import { ChevronDown, Phone, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import {
   Mountain,
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "A peaceful Himalayan home with 360° views of Kinnaur Kailash. Mountain-view rooms, homemade meals and warm Kinnauri hospitality.",
+          "A peaceful Himalayan home with panoramic views towards Kinnaur Kailash when visibility is clear. Mountain-view rooms, homemade meals and warm Kinnauri hospitality.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/" }],
@@ -172,7 +172,7 @@ function Hero() {
 }
 
 const amenities = [
-  { icon: Mountain, label: "360° Mountain Views" },
+  { icon: Mountain, label: "Mountain Views" },
   { icon: DoorOpen, label: "Private Balcony" },
   { icon: Users, label: "Family Rooms" },
   { icon: Wifi, label: "Free High-Speed Wi-Fi" },
@@ -211,16 +211,16 @@ function Home() {
             </p>
             <div className="mt-9 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <div>
-                <p className="font-display text-4xl text-pine">360°</p>
-                <p className="mt-1 text-xs text-muted-foreground">Himalayan views</p>
+                <p className="font-display text-4xl text-pine">Views</p>
+                <p className="mt-1 text-xs text-muted-foreground">Mountain scenery</p>
               </div>
               <div>
-                <p className="font-display text-4xl text-pine">4.9</p>
-                <p className="mt-1 text-xs text-muted-foreground">Guest rating</p>
+                <p className="font-display text-4xl text-pine">Family</p>
+                <p className="mt-1 text-xs text-muted-foreground">Hosted with care</p>
               </div>
               <div>
-                <p className="font-display text-4xl text-pine">2,960m</p>
-                <p className="mt-1 text-xs text-muted-foreground">Above sea level</p>
+                <p className="font-display text-4xl text-pine">Local</p>
+                <p className="mt-1 text-xs text-muted-foreground">Kinnauri hospitality</p>
               </div>
             </div>
           </Reveal>
@@ -311,8 +311,8 @@ function Home() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {[
               {
-                t: "Uninterrupted Kailash views",
-                d: "Balconies and terraces face the range directly — sunrise on the peaks arrives before your tea does.",
+                t: "Mountain-facing spaces",
+                d: "The terrace and balconies open towards Himalayan scenery, with views changing through the day and weather.",
               },
               {
                 t: "Hosted by a Kinnauri family",
@@ -323,16 +323,16 @@ function Home() {
                 d: "Siddu, rajma-chawal, local apples and fresh breakfast — cooked in our kitchen with local produce.",
               },
               {
-                t: "Warm rooms all winter",
-                d: "Deodar-panelled rooms with heating, thick quilts and hot water even in deep snowfall.",
+                t: "Comfort for cold seasons",
+                d: "Rooms include heating and warm bedding for cooler mountain nights; ask about current winter facilities before booking.",
               },
               {
                 t: "Genuinely family friendly",
-                d: "Spacious family suites, safe garden space for children, and pets are welcome too.",
+                d: "Spacious family suites and a calm village setting; ask in advance about bringing children or pets.",
               },
               {
-                t: "Best price, booked direct",
-                d: "No agents, no commission. One WhatsApp message gets you our lowest available rate.",
+                t: "Direct booking",
+                d: "Message the family directly on WhatsApp to check availability, room options and the current direct rate.",
               },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.06}>
@@ -449,7 +449,7 @@ function Home() {
             <p className="mt-6 text-[0.95rem] leading-loose text-muted-foreground">
               A cup of tea on arrival, a room warmed before you reach it, dinner served when you are
               hungry rather than when a kitchen closes. Our family has lived in Kinnaur for
-              generations, and the homestay runs the way our home always has.
+              years, and the homestay is hosted with the warmth and care of a family home.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-charcoal/80">
               <li>· Welcome tea and local apples</li>
@@ -465,7 +465,7 @@ function Home() {
               rel="noopener noreferrer"
               className="mt-9 inline-flex items-center gap-2 rounded-full bg-pine px-8 py-4 text-[0.72rem] tracking-widest text-snow uppercase transition hover:bg-forest"
             >
-              <FaWhatsapp /> Get Best Price
+              <FaWhatsapp /> Check Availability
             </a>
           </Reveal>
         </div>
@@ -648,50 +648,6 @@ function Home() {
           </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-        <Reveal className="max-w-2xl">
-          <p className="eyebrow text-pine">Guest Testimonials</p>
-          <h2 className="mt-4 text-4xl sm:text-5xl">Loved by families and slow travellers</h2>
-        </Reveal>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              n: "Ananya Sharma",
-              c: "Delhi",
-              r: "We opened the curtains and Kinnaur Kailash was just there. The family looked after our parents so warmly — the food was the highlight.",
-            },
-            {
-              n: "Rohit Menon",
-              c: "Bengaluru",
-              r: "Spotless rooms, proper heating during snowfall, and the best rajma-chawal I've had in the mountains. Booked direct on WhatsApp in two minutes.",
-            },
-            {
-              n: "Priya & Karan",
-              c: "Chandigarh",
-              r: "The terrace at sunrise is unreal. Peaceful, clean, genuinely hospitable hosts. We're already planning our next stay.",
-            },
-          ].map((t, i) => (
-            <Reveal key={t.n} delay={i * 0.08}>
-              <figure className="h-full rounded-3xl bg-card p-8 shadow-soft">
-                <div className="flex gap-1 text-gold">
-                  {[0, 1, 2, 3, 4].map((s) => (
-                    <Star key={s} size={14} fill="currentColor" strokeWidth={0} />
-                  ))}
-                </div>
-                <blockquote className="mt-5 text-sm leading-relaxed text-charcoal/80">
-                  “{t.r}”
-                </blockquote>
-                <figcaption className="mt-6 border-t border-border pt-5">
-                  <p className="font-display text-xl text-forest">{t.n}</p>
-                  <p className="text-xs text-muted-foreground">{t.c}</p>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="bg-secondary/60">
         <div className="mx-auto max-w-4xl px-6 py-24 lg:px-10">
@@ -780,7 +736,7 @@ function ParallaxStatement() {
       <div className="hero-overlay absolute inset-0" />
       <div className="relative flex h-full items-center justify-center px-6">
         <Reveal className="max-w-3xl text-center">
-          <p className="eyebrow text-gold">360° Mountain View Experience</p>
+          <p className="eyebrow text-gold">Panoramic Mountain View Experience</p>
           <h2 className="mt-6 text-4xl leading-tight text-snow text-balance-tight sm:text-6xl">
             The peaks change colour six times before breakfast. You only have to look up.
           </h2>

@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "KinVatika Homestay in Kalpa, Kinnaur — boutique mountain rooms with 360° Kinnaur Kailash views, homemade Himachali food and warm family hospitality.",
+          "KinVatika Homestay in Kalpa, Kinnaur — boutique mountain rooms with panoramic Kinnaur Kailash views when visibility is clear, homemade Himachali food and warm family hospitality.",
       },
       { property: "og:url", content: "https://www.kinvatikahomestay.com/" },
       { name: "author", content: "KinVatika Homestay" },
@@ -113,7 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Hotel",
           name: "KinVatika Homestay",
           description:
-            "Boutique family homestay in Kalpa, Kinnaur with 360° Kinnaur Kailash views, private balconies and homemade Himachali meals.",
+            "Boutique family homestay in Kalpa, Kinnaur with panoramic Kinnaur Kailash views, private balconies and homemade Himachali meals.",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Village Shudharang, Post Office & Tehsil Reckong Peo",
@@ -125,14 +125,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           geo: { "@type": "GeoCoordinates", latitude: 31.5292, longitude: 78.2668 },
           telephone: "+919953493171",
           priceRange: "₹₹",
-          starRating: { "@type": "Rating", ratingValue: "4.9" },
           amenityFeature: [
             "Mountain View",
             "Free Wi-Fi",
             "Free Parking",
             "Family Rooms",
             "Heating",
-            "Pet Friendly",
             "Garden",
             "Terrace",
           ].map((n) => ({ "@type": "LocationFeatureSpecification", name: n, value: true })),

@@ -34,8 +34,8 @@ function Experience() {
     <>
       <PageHero
         image={heroTerrace}
-        alt="360° mountain view from KinVatika Homestay in Kalpa"
-        eyebrow="360° Mountain View Experience"
+        alt="Panoramic mountain view from KinVatika Homestay in Kalpa"
+        eyebrow="Panoramic Mountain View Experience"
         title="The peaks change colour six times before breakfast. You only have to look up."
         subtitle="Wake up to the wide Kinnaur skyline, warm wood interiors and a sunrise that keeps changing the whole valley."
       />

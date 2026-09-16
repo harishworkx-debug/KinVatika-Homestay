@@ -13,7 +13,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "The story of KinVatika Homestay — a family-run boutique homestay in Village Shudharang, Kalpa, built in traditional Kinnauri wood with 360° Himalayan views.",
+          "The story of KinVatika Homestay — a family-run boutique homestay in Village Shudharang, Kalpa, built in traditional Kinnauri wood with panoramic Himalayan views when visibility is clear.",
       },
       { property: "og:title", content: "About KinVatika Homestay, Kalpa" },
       {
@@ -35,7 +35,7 @@ function About() {
         alt="KinVatika Homestay exterior with Himalayan peaks behind"
         eyebrow="About KinVatika"
         title="A Kinnauri family home, opened to travellers."
-        subtitle="Three generations, one hillside, and a belief that a guest should be fed and warmed before being asked anything at all."
+        subtitle="One hillside, a family welcome, and a belief that a guest should be fed and warmed before being asked anything at all."
       />
 
       <section className="mx-auto max-w-4xl px-6 py-24 lg:py-32">

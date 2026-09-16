@@ -10,5 +10,5 @@ export function whatsappLink(message: string) {
 }
 
 export const enquiryLink = whatsappLink(
-  "Hello KinVatika Homestay! I would like to check availability and best price for my stay in Kalpa, Kinnaur.",
+  "Hello KinVatika Homestay! I would like to check availability and current direct rates for my stay in Kalpa, Kinnaur.",
 );

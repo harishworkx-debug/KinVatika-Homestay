@@ -34,7 +34,7 @@ export function BookingForm({ compact = false }: { compact?: boolean }) {
       className={`rounded-3xl bg-card p-6 shadow-soft sm:p-9 ${compact ? "" : "border border-border/70"}`}
     >
       <p className="eyebrow text-gold">Reserve Your Stay</p>
-      <h3 className="mt-3 text-3xl">Check availability &amp; best price</h3>
+      <h3 className="mt-3 text-3xl">Check availability and direct rates</h3>
       <p className="mt-2 text-sm text-muted-foreground">
         Your details open directly in WhatsApp — we reply personally, usually within minutes.
       </p>

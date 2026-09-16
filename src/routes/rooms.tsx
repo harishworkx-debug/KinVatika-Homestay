@@ -80,7 +80,7 @@ function RoomCard({
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={whatsappLink(
-                `Hello KinVatika Homestay! I'd like to book the ${name}. Please share availability and best price.`,
+                `Hello KinVatika Homestay! I'd like to book the ${name}. Please share availability and current direct rates.`,
               )}
               target="_blank"
               rel="noopener noreferrer"

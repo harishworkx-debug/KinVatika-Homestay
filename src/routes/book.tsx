@@ -11,7 +11,7 @@ export const Route = createFileRoute("/book")({
       {
         name: "description",
         content:
-          "Book KinVatika Homestay in Kalpa directly on WhatsApp. Share your dates, guests and room type for the best available price — no commission, instant reply.",
+          "Book KinVatika Homestay in Kalpa directly on WhatsApp. Share your dates, guests and room type to check availability and current direct rates.",
       },
       { property: "og:title", content: "Book Your Stay — KinVatika Homestay, Kalpa" },
       {
@@ -32,7 +32,7 @@ function Book() {
         image={heroTerrace}
         alt="Terrace with panoramic Himalayan views at KinVatika Homestay"
         eyebrow="Book Your Stay"
-        title="Direct booking. Best price. Instant reply."
+        title="Direct booking. Current rates. Personal reply."
         subtitle="Fill in your details and we'll confirm on WhatsApp — usually within a few minutes."
       />
 
