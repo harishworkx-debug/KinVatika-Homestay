@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
-import kinnaurKailash from "../assets/Kinnaur Kailash Viewpoint.png";
+import kinnaurKailash from "../assets/Kinnaur-Kailash Viewpoint.png";
 import homestaySnow from "../assets/kinvatika-views12.png";
 import gardenValley from "../assets/kinvatika-gardan.png";
 import heroTerrace from "../assets/kinvatika-views14.png";

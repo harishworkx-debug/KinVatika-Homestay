@@ -31,17 +31,26 @@ import { ADDRESS, PHONE, PHONE_TEL, enquiryLink, whatsappLink } from "@/lib/cont
 import heroTerrace from "../assets/food3.png";
 import homestayExterior from "../assets/kinvatika-views3.png";
 import homestaySnow from "../assets/kinvatika-views12.png";
-import homestaySummer from "../assets/kinvatika-views10.png";
+import homestaySummer from "../assets/homestay-summer.png";
 import kinnaurKailash from "../assets/kinvatika-views14.png";
 import deluxeRoom from "../assets/DeluxeMountainViewRoom.png";
 import familyRoom from "../assets/family-room.png";
 import balconyCorridor from "../assets/kinvatika-views11.png";
-import interiorLobby from "../assets/gallery8.png";
+import balconyCorridor2 from "../assets/balcony-room3.png";
+
+import interiorLobby from "../assets/kinvatika-views7.png";
+import interiorLobby2 from "../assets/gallery8.png";
 import gardenValley from "../assets/food.png";
+import gardenValley3 from "../assets/kinvatika-views10.png";
 import momentsGallery1 from "../assets/gallery6.png";
 import momentsGallery2 from "../assets/kinvatika-views9.png.webp";
 import momentsGallery3 from "../assets/gallery9.png";
 import momentsGallery4 from "../assets/moments.png";
+import heroLoop1 from "../assets/homestay-summer.png";
+import heroLoop2 from "../assets/KalpaVillage.png";
+import heroLoop3 from "../assets/kinvatika-views14.png";
+import heroLoop4 from "../assets/RoghiVillage.png";
+import heroLoop5 from "../assets/ThebestofKinnaurr.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,7 +118,7 @@ function Hero() {
     <section ref={ref} className="relative h-[100svh] min-h-[600px] overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0">
         <motion.img
-          src={heroTerrace}
+          src={heroLoop1}
           alt="Sunrise over the Kinnaur Kailash range from the terrace of KinVatika Homestay, Kalpa"
           className="absolute inset-0 h-full w-full object-cover"
           initial={{ scale: 1.15 }}
@@ -117,18 +126,32 @@ function Hero() {
           transition={{ duration: 3, ease: [0.22, 1, 0.36, 1] }}
         />
         <motion.img
-          src={homestaySnow}
-          alt="KinVatika Homestay under fresh Kalpa snowfall"
+          src={heroLoop2}
+          alt="Kalpa village and mountain scenery around KinVatika Homestay"
           className="absolute inset-0 h-full w-full object-cover"
           animate={{ opacity: [0, 0, 1, 1, 0] }}
-          transition={{ duration: 18, times: [0, 0.32, 0.42, 0.62, 0.72], repeat: Infinity }}
+          transition={{ duration: 18, times: [0, 0.18, 0.28, 0.52, 0.72], repeat: Infinity }}
         />
         <motion.img
-          src={homestaySummer}
-          alt="KinVatika Homestay in summer with snow peaks behind"
+          src={heroLoop3}
+          alt="KinVatika mountain-view terrace with panoramic Kinnaur landscape"
           className="absolute inset-0 h-full w-full object-cover"
           animate={{ opacity: [0, 0, 1, 1, 0] }}
-          transition={{ duration: 18, times: [0, 0.68, 0.78, 0.92, 1], repeat: Infinity }}
+          transition={{ duration: 18, times: [0, 0.34, 0.48, 0.68, 1], repeat: Infinity }}
+        />
+        <motion.img
+          src={heroLoop4}
+          alt="Roghi village and mountain road around Kalpa"
+          className="absolute inset-0 h-full w-full object-cover"
+          animate={{ opacity: [0, 0, 1, 1, 0] }}
+          transition={{ duration: 18, times: [0, 0.52, 0.64, 0.8, 1], repeat: Infinity }}
+        />
+        <motion.img
+          src={heroLoop5}
+          alt="Best of Kinnaur mountain landscape near KinVatika Homestay"
+          className="absolute inset-0 h-full w-full object-cover"
+          animate={{ opacity: [0, 0, 1, 1, 0] }}
+          transition={{ duration: 18, times: [0, 0.68, 0.78, 0.9, 1], repeat: Infinity }}
         />
       </motion.div>
       <div className="hero-overlay absolute inset-0" />
@@ -253,7 +276,7 @@ function Home() {
               className="h-56 w-full rounded-3xl object-cover shadow-soft"
             />
             <img
-              src={gardenValley}
+              src={gardenValley3}
               alt="Garden and valley view from KinVatika Homestay, Kalpa"
               loading="lazy"
               className="h-56 w-full rounded-3xl object-cover shadow-soft"
@@ -370,7 +393,7 @@ function Home() {
             <article className="group overflow-hidden rounded-3xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-2 hover:shadow-lift">
               <div className="overflow-hidden">
                 <img
-                  src={balconyCorridor}
+                  src={balconyCorridor2}
                   alt="Sunlit private balcony corridor at KinVatika Homestay in Kalpa"
                   loading="lazy"
                   className="h-72 w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
@@ -398,7 +421,7 @@ function Home() {
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <img
-              src={interiorLobby}
+              src={interiorLobby2}
               alt="Traditional Himachali wooden interiors at KinVatika Homestay"
               loading="lazy"
               className="h-[30rem] w-full rounded-3xl object-cover shadow-lift"

@@ -3,7 +3,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
 import { ArrowRight } from "lucide-react";
-import kinnaurKailash from "../assets/Kinnaur Kailash Viewpoint.png";
+import kinnaurKailash from "../assets/Kinnaur-Kailash Viewpoint.png";
 
 export const Route = createFileRoute("/things-to-do-in-kalpa")({
   head: () => ({

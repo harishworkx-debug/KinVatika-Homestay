@@ -9,7 +9,7 @@ import heroTerrace from "../assets/kinvatika-views14.png";
 import homestayExterior from "../assets/kinvatika-views3.png";
 import homestaySnow from "../assets/kinvatika-views12.png";
 import homestaySummer from "../assets/kinvatika-views10.png";
-import kinnaurKailash from "../assets/Kinnaur Kailash Viewpoint.png";
+import kinnaurKailash from "../assets/Kinnaur-Kailash Viewpoint.png";
 import deluxeRoom from "../assets/DeluxeMountainViewRoom.png";
 import familyRoom from "../assets/family-room.png";
 import balconyCorridor from "../assets/BalconyRoom.png";

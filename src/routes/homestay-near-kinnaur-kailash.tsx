@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LocationPage } from "@/components/site/LocationPage";
-import kinnaurKailash from "../assets/Kinnaur Kailash Viewpoint.png";
+import kinnaurKailash from "../assets/Kinnaur-Kailash Viewpoint.png";
 
 export const Route = createFileRoute("/homestay-near-kinnaur-kailash")({
   head: () => ({
