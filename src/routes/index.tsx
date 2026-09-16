@@ -61,15 +61,15 @@ export const Route = createFileRoute("/")({
         content:
           "Stay at KinVatika Homestay, one of the most welcoming homestays in Kalpa, Kinnaur. Enjoy mountain views, Kinnaur Kailash views, traditional Himalayan food and authentic local hospitality.",
       },
+      { property: "og:url", content: "https://kinvatika.com/" },
       { property: "og:title", content: "Best Homestay in Kalpa, Kinnaur | KinVatika Homestay" },
       {
         property: "og:description",
         content:
           "A peaceful Himalayan home with 360° views of Kinnaur Kailash. Mountain-view rooms, homemade meals and warm Kinnauri hospitality.",
       },
-      { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://kinvatika.com/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -79,18 +79,26 @@ export const Route = createFileRoute("/")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "Where is KinVatika Homestay located?",
+              name: "Where exactly is KinVatika Homestay?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "KinVatika Homestay is in Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Himachal Pradesh 172107 — minutes from Kalpa village and the Kinnaur Kailash viewpoint.",
+                text: "KinVatika Homestay is in Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Kinnaur, Himachal Pradesh – 172107. It is a short drive above Reckong Peo and a convenient base for exploring Kalpa and the wider Kinnaur valley.",
               },
             },
             {
               "@type": "Question",
-              name: "How do I book a room at KinVatika Homestay?",
+              name: "How do I book KinVatika Homestay?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Booking is direct. Send your dates on WhatsApp at +91 99534 93171 or call the same number for the best available price.",
+                text: "Booking is direct. Send your dates on WhatsApp at +91 99534 93171 or call the same number for the latest availability and room rates. Direct booking is the simplest way to plan a stay in Kalpa.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Is the homestay open during winter snowfall?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. KinVatika stays open through winter with heated rooms, warm blankets and hot water. Snowfall adds to the atmosphere, but guests should confirm road conditions before travelling in heavy snow.",
               },
             },
             {
@@ -98,7 +106,39 @@ export const Route = createFileRoute("/")({
               name: "Is food available at the homestay?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. Homemade Himachali meals, fresh Indian and continental breakfast, and vegetarian options are served, often on the open terrace.",
+                text: "Yes. KinVatika serves home-cooked Himalayan food, including breakfast, vegetarian meals and local Kinnauri dishes made in our own kitchen. Many guests enjoy dining on the terrace with mountain views.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Are pets allowed?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Well-behaved pets are generally welcome, but it is best to let the family know in advance so they can prepare the room and surrounding space. This helps make the stay comfortable for both pets and other guests.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How do we reach Kalpa?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Kalpa is easiest to reach by road from Shimla, Chandigarh or Delhi via the Kinnaur route. Many travellers arrive by private vehicle or taxi to Reckong Peo and continue uphill into Kalpa. We can help with local guidance and transfer planning.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How far is KinVatika from Reckong Peo?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "KinVatika is in Village Shudharang, above Reckong Peo in the Kalpa area of Kinnaur. It is close enough for a short drive, making it a practical base for visitors who want mountain views without staying in a busy town centre.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What attractions can guests visit near Kalpa?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Nearby highlights include the Kinnaur Kailash viewpoint, Kalpa village, orchard walks, temple visits and scenic valley drives around Roghi and the wider Kinnaur region. The area is known for mountain views, village culture and peaceful Himalayan scenery.",
               },
             },
           ],
@@ -283,6 +323,42 @@ function Home() {
             />
           </Reveal>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+        <Reveal className="max-w-4xl">
+          <p className="eyebrow text-pine">Best Homestay in Kalpa, Kinnaur</p>
+          <h2 className="mt-5 text-4xl leading-tight sm:text-5xl">
+            A peaceful family homestay in Village Shudharang, close to Kalpa and the Kinnaur Kailash range.
+          </h2>
+          <div className="mt-8 space-y-5 text-[0.98rem] leading-loose text-muted-foreground">
+            <p>
+              KinVatika Homestay is a warm, family-run place to stay in the heart of Kinnaur, where mountain light,
+              orchard air and a slower rhythm of village life make every day feel memorable. We are based in
+              Village Shudharang, a quiet part of the Kalpa region, and our location gives guests the best of both
+              worlds: close access to Kalpa, the wider Kinnaur valley and the famous Kinnaur Kailash views.
+            </p>
+            <p>
+              Guests choose KinVatika for the combination of comfortable rooms, all-day mountain scenery and genuine
+              hospitality. From the terrace, balconies and windows, the snow line and peaks of the Himalayas are often
+              visible throughout the day, while the surrounding apple orchards and village lanes add to the calm,
+              authentic feel of the stay.
+            </p>
+            <p>
+              Our rooms are designed for rest and comfort, with warm interiors, soft bedding and a clean mountain-home
+              atmosphere. We serve homemade Himachali and Kinnauri food made in our own kitchen, with vegetarian meals,
+              breakfast and simple, nourishing dishes that suit long valley walks, road journeys and slow evenings under
+              the stars. Families, couples and travellers who want a more personal stay in Kinnaur often find that a
+              homestay here feels both practical and memorable.
+            </p>
+            <p>
+              Kalpa is one of the most rewarding places to stay in Himachal because it blends dramatic views with a more
+              grounded, local pace. Whether you are planning a short getaway, a family holiday, or a broader Kinnaur
+              road trip, KinVatika offers a comfortable base close to Reckong Peo, Kalpa village and the region’s best
+              natural attractions.
+            </p>
+          </div>
+        </Reveal>
       </section>
 
       {/* Why choose us */}
@@ -577,7 +653,7 @@ function Home() {
         <Reveal className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
             <p className="eyebrow text-pine">Nearby Attractions</p>
-            <h2 className="mt-4 text-4xl sm:text-5xl">Everything worth seeing is minutes away</h2>
+            <h2 className="mt-4 text-4xl sm:text-5xl">Explore the Best Places to Visit Near Kalpa</h2>
           </div>
           <Link
             to="/attractions"
@@ -598,7 +674,7 @@ function Home() {
               <div className="p-7">
                 <h3 className="text-2xl">Kinnaur Kailash Viewpoint</h3>
                 <p className="mt-2 text-xs tracking-widest text-gold uppercase">
-                  1.5 km · 5 min drive
+                  Short drive from Kalpa
                 </p>
               </div>
             </article>
@@ -614,7 +690,7 @@ function Home() {
               <div className="p-7">
                 <h3 className="text-2xl">Kalpa Village</h3>
                 <p className="mt-2 text-xs tracking-widest text-gold uppercase">
-                  2 km · 7 min drive
+                  Local village walk
                 </p>
               </div>
             </article>
@@ -630,7 +706,7 @@ function Home() {
               <div className="p-7">
                 <h3 className="text-2xl">Suicide Point, Roghi</h3>
                 <p className="mt-2 text-xs tracking-widest text-gold uppercase">
-                  7 km · 20 min drive
+                  Scenic valley drive
                 </p>
               </div>
             </article>
@@ -782,8 +858,23 @@ function Home() {
                   How do we reach Kalpa?
                 </AccordionTrigger>
                 <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  Buses and taxis run from Shimla to Reckong Peo (approx. 8–9 hours), and Kalpa is
-                  30 minutes further uphill. We can help arrange a local pick-up.
+                  Kalpa is easiest to reach by road from Shimla, Chandigarh or Delhi via the Kinnaur route. Many travellers arrive by private vehicle or taxi to Reckong Peo and continue uphill into Kalpa. If you are planning the journey, our team can help with local guidance and transfer support.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="6">
+                <AccordionTrigger className="text-left text-lg">
+                  How far is KinVatika from Reckong Peo?
+                </AccordionTrigger>
+                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                  KinVatika is in Village Shudharang, above Reckong Peo in the Kalpa area of Kinnaur. It is close enough for a short drive, making it a practical base for visitors who want mountain views without staying in a busy town centre.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="7">
+                <AccordionTrigger className="text-left text-lg">
+                  What attractions can guests visit near Kalpa?
+                </AccordionTrigger>
+                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                  Nearby highlights include the Kinnaur Kailash viewpoint, Kalpa village, orchard walks, temple visits and scenic valley drives around Roghi and the wider Kinnaur region. The area is known for mountain views, village culture and peaceful Himalayan scenery.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

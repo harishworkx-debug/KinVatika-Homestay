@@ -17,9 +17,9 @@ export const Route = createFileRoute("/homestay-in-kinnaur")({
         content:
           "A comfortable Kinnaur homestay in the valley, ideal for families and travellers seeking Himalayan peace.",
       },
-      { property: "og:url", content: "/homestay-in-kinnaur" },
+      { property: "og:url", content: "https://kinvatika.com/homestay-in-kinnaur" },
     ],
-    links: [{ rel: "canonical", href: "/homestay-in-kinnaur" }],
+    links: [{ rel: "canonical", href: "https://kinvatika.com/homestay-in-kinnaur" }],
   }),
   component: HomestayInKinnaur,
 });

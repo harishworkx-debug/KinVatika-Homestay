@@ -19,9 +19,9 @@ export const Route = createFileRoute("/things-to-do-in-kalpa")({
         property: "og:description",
         content: "A practical guide to the best experiences around Kalpa, including viewpoints, temples and village walks.",
       },
-      { property: "og:url", content: "/things-to-do-in-kalpa" },
+      { property: "og:url", content: "https://kinvatika.com/things-to-do-in-kalpa" },
     ],
-    links: [{ rel: "canonical", href: "/things-to-do-in-kalpa" }],
+    links: [{ rel: "canonical", href: "https://kinvatika.com/things-to-do-in-kalpa" }],
   }),
   component: ThingsToDoInKalpa,
 });

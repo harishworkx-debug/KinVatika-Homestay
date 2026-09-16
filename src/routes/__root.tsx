@@ -84,6 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "KinVatika Homestay in Kalpa, Kinnaur — boutique mountain rooms with 360° Kinnaur Kailash views, homemade Himachali food and warm family hospitality.",
       },
+      { property: "og:url", content: "https://kinvatika.com/" },
       { name: "author", content: "KinVatika Homestay" },
       { property: "og:site_name", content: "KinVatika Homestay" },
       { property: "og:type", content: "website" },
@@ -98,6 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "canonical", href: "https://kinvatika.com/" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Karla:wght@300;400;500;600&display=swap",

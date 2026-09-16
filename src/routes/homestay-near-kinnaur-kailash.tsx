@@ -17,9 +17,9 @@ export const Route = createFileRoute("/homestay-near-kinnaur-kailash")({
         content:
           "A scenic Kalpa homestay near Kinnaur Kailash with mountain-view rooms and warm hospitality.",
       },
-      { property: "og:url", content: "/homestay-near-kinnaur-kailash" },
+      { property: "og:url", content: "https://kinvatika.com/homestay-near-kinnaur-kailash" },
     ],
-    links: [{ rel: "canonical", href: "/homestay-near-kinnaur-kailash" }],
+    links: [{ rel: "canonical", href: "https://kinvatika.com/homestay-near-kinnaur-kailash" }],
   }),
   component: HomestayNearKinnaurKailash,
 });
