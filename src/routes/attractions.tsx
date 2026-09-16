@@ -3,12 +3,14 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
 import kinnaurKailash from "../assets/Kinnaur Kailash Viewpoint.png";
-import homestayExterior from "../assets/kinvatika-views3.png";
+import homestayExterior from "../assets/ThebestofKinnaurr.png";
 import gardenValley from "../assets/kinvatika-gardan.png";
 import homestaySummer from "../assets/kinvatika-views10.png";
-import homestaySnow from "../assets/kinvatika-views12.png";
-import heroTerrace from "../assets/kinvatika-views14.png";
+import homestaySnow from "../assets/RoghiVillage.png";
+import heroTerrace from "../assets/ReckongPeo.png";
 import suicidePoint from "../assets/SuicidePoint,Roghi.png";
+import homestayExterior2 from "../assets/NarayanNaginiTemple.png";
+
 
 export const Route = createFileRoute("/attractions")({
   head: () => ({
@@ -120,7 +122,7 @@ function Attractions() {
         />
         <Card
           delay={0.3}
-          image={homestayExterior}
+          image={homestayExterior2}
           alt="Traditional wooden temple architecture in Kalpa"
           name="Narayan Nagini Temple"
           meta="2 km · 7 min drive"

@@ -5,10 +5,11 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
 import { PHONE_TEL, whatsappLink } from "@/lib/contact";
-import deluxeRoom from "../assets/DeluxeMountainViewRoom.png";
+import deluxeRoom from "../assets/rooms.png";
+import deluxeRoom2 from "../assets/DeluxeMountainViewRoom.png";
 import familyRoom from "../assets/family-room.png";
-import balconyCorridor from "../assets/BalconyRoom.png";
-import interiorLobby from "../assets/kinvatika-views2.png";
+import balconyCorridor from "../assets/balcony-room3.png";
+import interiorLobby from "../assets/common-area.png";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({
@@ -113,7 +114,7 @@ function Rooms() {
 
       <div className="mx-auto max-w-7xl space-y-28 px-6 py-24 lg:px-10 lg:py-32">
         <RoomCard
-          image={deluxeRoom}
+          image={deluxeRoom2}
           alt="Deluxe mountain view room with deodar wood panelling"
           name="Deluxe Mountain View Room"
           desc="Our signature room: king bed, hand-finished deodar walls, a woven ceiling and windows angled toward the Kinnaur Kailash range. Ideal for couples and photographers who want the first light."

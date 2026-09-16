@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
-import blogImage from "../assets/kinvatika-views14.png";
+import blogImage from "../assets/gallery7.png";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({

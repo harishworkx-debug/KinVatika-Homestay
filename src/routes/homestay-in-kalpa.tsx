@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LocationPage } from "@/components/site/LocationPage";
-import heroTerrace from "../assets/kinvatika-views14.png";
+import heroTerrace from "../assets/KalpaVillage.png";
 
 export const Route = createFileRoute("/homestay-in-kalpa")({
   head: () => ({
