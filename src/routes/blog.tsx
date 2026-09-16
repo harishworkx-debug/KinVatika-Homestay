@@ -18,9 +18,9 @@ export const Route = createFileRoute("/blog")({
         property: "og:description",
         content: "Useful travel articles on Kalpa, Kinnaur, mountain stays and the best things to do in the valley.",
       },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/blog" }],
   }),
   component: Blog,
 });

@@ -20,9 +20,9 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "A Kinnauri family home turned boutique homestay above Reckong Peo.",
       },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/about" }],
   }),
   component: About,
 });

@@ -25,9 +25,9 @@ export const Route = createFileRoute("/rooms")({
         property: "og:description",
         content: "Wooden mountain-view rooms and family suites in Kalpa, Kinnaur.",
       },
-      { property: "og:url", content: "/rooms" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/rooms" },
     ],
-    links: [{ rel: "canonical", href: "/rooms" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/rooms" }],
   }),
   component: Rooms,
 });

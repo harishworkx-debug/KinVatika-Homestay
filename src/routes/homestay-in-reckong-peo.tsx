@@ -17,9 +17,9 @@ export const Route = createFileRoute("/homestay-in-reckong-peo")({
         content:
           "A quiet homestay near Reckong Peo, ideal for travellers visiting Kalpa, Kinnaur and the Himalayan valley.",
       },
-      { property: "og:url", content: "https://kinvatika.com/homestay-in-reckong-peo" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/homestay-in-reckong-peo" },
     ],
-    links: [{ rel: "canonical", href: "https://kinvatika.com/homestay-in-reckong-peo" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/homestay-in-reckong-peo" }],
   }),
   component: HomestayInReckongPeo,
 });

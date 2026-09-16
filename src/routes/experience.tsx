@@ -22,9 +22,9 @@ export const Route = createFileRoute("/experience")({
         property: "og:description",
         content: "Sunrise on sacred peaks, orchards, festivals and quiet mountain life in Kalpa.",
       },
-      { property: "og:url", content: "/experience" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/experience" },
     ],
-    links: [{ rel: "canonical", href: "/experience" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/experience" }],
   }),
   component: Experience,
 });

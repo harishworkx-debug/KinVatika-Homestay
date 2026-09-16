@@ -19,9 +19,9 @@ export const Route = createFileRoute("/reviews")({
         property: "og:description",
         content: "What families and travellers say about staying at KinVatika in Kalpa.",
       },
-      { property: "og:url", content: "/reviews" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/reviews" },
     ],
-    links: [{ rel: "canonical", href: "/reviews" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/reviews" }],
     scripts: [
       {
         type: "application/ld+json",

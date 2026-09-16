@@ -21,9 +21,9 @@ export const Route = createFileRoute("/contact")({
         property: "og:description",
         content: "Reach us on WhatsApp or phone for direct bookings in Kalpa, Kinnaur.",
       },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/contact" }],
   }),
   component: Contact,
 });

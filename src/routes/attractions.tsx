@@ -26,9 +26,9 @@ export const Route = createFileRoute("/attractions")({
         property: "og:description",
         content: "The best places around Kalpa, minutes from KinVatika Homestay.",
       },
-      { property: "og:url", content: "/attractions" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/attractions" },
     ],
-    links: [{ rel: "canonical", href: "/attractions" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/attractions" }],
   }),
   component: Attractions,
 });

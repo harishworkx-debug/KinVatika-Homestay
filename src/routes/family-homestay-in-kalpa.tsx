@@ -17,9 +17,9 @@ export const Route = createFileRoute("/family-homestay-in-kalpa")({
         content:
           "A family-friendly homestay in Kalpa with spacious rooms, local food and comfort for every age group.",
       },
-      { property: "og:url", content: "https://kinvatika.com/family-homestay-in-kalpa" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/family-homestay-in-kalpa" },
     ],
-    links: [{ rel: "canonical", href: "https://kinvatika.com/family-homestay-in-kalpa" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/family-homestay-in-kalpa" }],
   }),
   component: FamilyHomestayInKalpa,
 });

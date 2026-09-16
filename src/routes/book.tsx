@@ -18,9 +18,9 @@ export const Route = createFileRoute("/book")({
         property: "og:description",
         content: "Direct WhatsApp booking for mountain-view rooms in Kalpa, Kinnaur.",
       },
-      { property: "og:url", content: "/book" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/book" },
     ],
-    links: [{ rel: "canonical", href: "/book" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/book" }],
   }),
   component: Book,
 });

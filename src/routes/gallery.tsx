@@ -47,9 +47,9 @@ export const Route = createFileRoute("/gallery")({
         property: "og:description",
         content: "Rooms, balconies, gardens and Himalayan views at KinVatika Homestay.",
       },
-      { property: "og:url", content: "/gallery" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/gallery" },
     ],
-    links: [{ rel: "canonical", href: "/gallery" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/gallery" }],
   }),
   component: Gallery,
 });

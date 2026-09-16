@@ -17,9 +17,9 @@ export const Route = createFileRoute("/mountain-view-homestay-kalpa")({
         content:
           "A peaceful mountain-view homestay in Kalpa with Kinnaur Kailash scenery, balconies and orchard surroundings.",
       },
-      { property: "og:url", content: "https://kinvatika.com/mountain-view-homestay-kalpa" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/mountain-view-homestay-kalpa" },
     ],
-    links: [{ rel: "canonical", href: "https://kinvatika.com/mountain-view-homestay-kalpa" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/mountain-view-homestay-kalpa" }],
   }),
   component: MountainViewHomestayKalpa,
 });

@@ -20,9 +20,9 @@ export const Route = createFileRoute("/dining")({
         property: "og:description",
         content: "Homemade mountain meals served with a Kinnaur Kailash view.",
       },
-      { property: "og:url", content: "/dining" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/dining" },
     ],
-    links: [{ rel: "canonical", href: "/dining" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/dining" }],
   }),
   component: Dining,
 });

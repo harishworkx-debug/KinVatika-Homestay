@@ -19,9 +19,9 @@ export const Route = createFileRoute("/kinnaur-kailash-travel-guide")({
         property: "og:description",
         content: "A useful travel guide for Kinnaur Kailash, Kalpa and mountain sightseeing in the region.",
       },
-      { property: "og:url", content: "/kinnaur-kailash-travel-guide" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/kinnaur-kailash-travel-guide" },
     ],
-    links: [{ rel: "canonical", href: "/kinnaur-kailash-travel-guide" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/kinnaur-kailash-travel-guide" }],
   }),
   component: KinnaurKailashTravelGuide,
 });

@@ -51,6 +51,10 @@ import heroLoop2 from "../assets/KalpaVillage.png";
 import heroLoop3 from "../assets/kinvatika-views14.png";
 import heroLoop4 from "../assets/RoghiVillage.png";
 import heroLoop5 from "../assets/ThebestofKinnaurr.png";
+import family from "../assets/family.png";
+import family1 from "../assets/family1.png";
+import family2 from "../assets/family2.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,7 +65,7 @@ export const Route = createFileRoute("/")({
         content:
           "Stay at KinVatika Homestay, one of the most welcoming homestays in Kalpa, Kinnaur. Enjoy mountain views, Kinnaur Kailash views, traditional Himalayan food and authentic local hospitality.",
       },
-      { property: "og:url", content: "https://kinvatika.com/" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/" },
       { property: "og:title", content: "Best Homestay in Kalpa, Kinnaur | KinVatika Homestay" },
       {
         property: "og:description",
@@ -69,7 +73,7 @@ export const Route = createFileRoute("/")({
           "A peaceful Himalayan home with 360° views of Kinnaur Kailash. Mountain-view rooms, homemade meals and warm Kinnauri hospitality.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://kinvatika.com/" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -326,39 +330,56 @@ function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-        <Reveal className="max-w-4xl">
-          <p className="eyebrow text-pine">Best Homestay in Kalpa, Kinnaur</p>
-          <h2 className="mt-5 text-4xl leading-tight sm:text-5xl">
-            A peaceful family homestay in Village Shudharang, close to Kalpa and the Kinnaur Kailash range.
-          </h2>
-          <div className="mt-8 space-y-5 text-[0.98rem] leading-loose text-muted-foreground">
-            <p>
-              KinVatika Homestay is a warm, family-run place to stay in the heart of Kinnaur, where mountain light,
-              orchard air and a slower rhythm of village life make every day feel memorable. We are based in
-              Village Shudharang, a quiet part of the Kalpa region, and our location gives guests the best of both
-              worlds: close access to Kalpa, the wider Kinnaur valley and the famous Kinnaur Kailash views.
-            </p>
-            <p>
-              Guests choose KinVatika for the combination of comfortable rooms, all-day mountain scenery and genuine
-              hospitality. From the terrace, balconies and windows, the snow line and peaks of the Himalayas are often
-              visible throughout the day, while the surrounding apple orchards and village lanes add to the calm,
-              authentic feel of the stay.
-            </p>
-            <p>
-              Our rooms are designed for rest and comfort, with warm interiors, soft bedding and a clean mountain-home
-              atmosphere. We serve homemade Himachali and Kinnauri food made in our own kitchen, with vegetarian meals,
-              breakfast and simple, nourishing dishes that suit long valley walks, road journeys and slow evenings under
-              the stars. Families, couples and travellers who want a more personal stay in Kinnaur often find that a
-              homestay here feels both practical and memorable.
-            </p>
-            <p>
-              Kalpa is one of the most rewarding places to stay in Himachal because it blends dramatic views with a more
-              grounded, local pace. Whether you are planning a short getaway, a family holiday, or a broader Kinnaur
-              road trip, KinVatika offers a comfortable base close to Reckong Peo, Kalpa village and the region’s best
-              natural attractions.
-            </p>
-          </div>
-        </Reveal>
+        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
+          <Reveal>
+            <p className="eyebrow text-pine">Best Homestay in Kalpa, Kinnaur</p>
+            <h2 className="mt-5 text-4xl leading-tight sm:text-5xl">
+              A peaceful family homestay in Village Shudharang, close to Kalpa and the Kinnaur Kailash range.
+            </h2>
+            <div className="mt-8 space-y-5 text-[0.98rem] leading-loose text-muted-foreground">
+              <p>
+                KinVatika Homestay is a warm, family-run place to stay in the heart of Kinnaur, where mountain light,
+                orchard air and a slower village rhythm make every day feel memorable. We are based in Village
+                Shudharang, in the Kalpa region, close to Kalpa, the wider Kinnaur valley and famous Kinnaur Kailash views.
+              </p>
+              <p>
+                Guests come for comfortable rooms, all-day mountain scenery and genuine hospitality. The terrace,
+                balconies and windows open towards the snow line, while apple orchards and village lanes bring a calm,
+                authentic feel to the stay.
+              </p>
+              <p>
+                Our warm rooms and homemade Himachali and Kinnauri food make a practical base for families, couples and
+                road-trippers. Vegetarian meals, breakfast and simple local dishes are prepared in our own kitchen for
+                travellers returning from valley walks and nearby attractions.
+              </p>
+              <p>
+                Staying in Kalpa lets you enjoy dramatic Himalayan views at a slower pace. KinVatika is also a useful
+                base near Reckong Peo, Kalpa village and the scenic roads of Kinnaur.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.12} className="grid grid-cols-2 gap-4">
+            <img
+              src={family2}
+              alt="Kinnaur Kailash mountain view from KinVatika Homestay near Kalpa"
+              loading="lazy"
+              className="col-span-2 h-72 w-full rounded-3xl object-cover shadow-soft sm:h-80"
+            />
+            <img
+              src={family1}
+              alt="Warm Himachali wooden interior at KinVatika Homestay"
+              loading="lazy"
+              className="h-52 w-full rounded-3xl object-cover shadow-soft"
+            />
+            <img
+              src={family}
+              alt="Mountain valley view from KinVatika Homestay in Shudharang"
+              loading="lazy"
+              className="h-52 w-full rounded-3xl object-cover shadow-soft"
+            />
+          </Reveal>
+        </div>
       </section>
 
       {/* Why choose us */}

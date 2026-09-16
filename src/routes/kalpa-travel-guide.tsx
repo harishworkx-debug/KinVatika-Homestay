@@ -19,9 +19,9 @@ export const Route = createFileRoute("/kalpa-travel-guide")({
         property: "og:description",
         content: "A practical Kalpa travel guide with local tips, best viewpoints and a stay recommendation in Kinnaur.",
       },
-      { property: "og:url", content: "https://kinvatika.com/kalpa-travel-guide" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/kalpa-travel-guide" },
     ],
-    links: [{ rel: "canonical", href: "https://kinvatika.com/kalpa-travel-guide" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/kalpa-travel-guide" }],
   }),
   component: KalpaTravelGuide,
 });

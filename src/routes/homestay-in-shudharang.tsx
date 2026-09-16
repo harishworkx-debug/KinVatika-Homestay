@@ -17,9 +17,9 @@ export const Route = createFileRoute("/homestay-in-shudharang")({
         content:
           "A peaceful homestay in Shudharang, near Kalpa and Kinnaur Kailash views.",
       },
-      { property: "og:url", content: "https://kinvatika.com/homestay-in-shudharang" },
+      { property: "og:url", content: "https://www.kinvatikahomestay.com/homestay-in-shudharang" },
     ],
-    links: [{ rel: "canonical", href: "https://kinvatika.com/homestay-in-shudharang" }],
+    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/homestay-in-shudharang" }],
   }),
   component: HomestayInShudharang,
 });
