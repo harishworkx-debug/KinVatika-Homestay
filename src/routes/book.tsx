@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { BookingForm } from "@/components/site/BookingForm";
-import heroTerrace from "../assets/hero-terrace-view.png";
+import heroTerrace from "../assets/kinvatika-views14.png";
 
 export const Route = createFileRoute("/book")({
   head: () => ({

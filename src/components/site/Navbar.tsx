@@ -10,11 +10,10 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/rooms", label: "Rooms" },
-  { to: "/dining", label: "Dining" },
-  { to: "/experience", label: "Kinnaur" },
+  { to: "/homestay-in-kalpa", label: "Kalpa" },
+  { to: "/homestay-in-kinnaur", label: "Kinnaur" },
   { to: "/attractions", label: "Nearby" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/reviews", label: "Reviews" },
+  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 

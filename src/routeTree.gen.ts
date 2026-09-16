@@ -12,13 +12,24 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AttractionsRouteImport } from './routes/attractions'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DiningRouteImport } from './routes/dining'
 import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as FamilyHomestayInKalpaRouteImport } from './routes/family-homestay-in-kalpa'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as HomestayInKalpaRouteImport } from './routes/homestay-in-kalpa'
+import { Route as HomestayInKinnaurRouteImport } from './routes/homestay-in-kinnaur'
+import { Route as HomestayInReckongPeoRouteImport } from './routes/homestay-in-reckong-peo'
+import { Route as HomestayInShudharangRouteImport } from './routes/homestay-in-shudharang'
+import { Route as HomestayNearKinnaurKailashRouteImport } from './routes/homestay-near-kinnaur-kailash'
+import { Route as KalpaTravelGuideRouteImport } from './routes/kalpa-travel-guide'
+import { Route as KinnaurKailashTravelGuideRouteImport } from './routes/kinnaur-kailash-travel-guide'
+import { Route as MountainViewHomestayKalpaRouteImport } from './routes/mountain-view-homestay-kalpa'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RoomsRouteImport } from './routes/rooms'
+import { Route as ThingsToDoInKalpaRouteImport } from './routes/things-to-do-in-kalpa'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -33,6 +44,11 @@ const AboutRoute = AboutRouteImport.update({
 const AttractionsRoute = AttractionsRouteImport.update({
   id: '/attractions',
   path: '/attractions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BookRoute = BookRouteImport.update({
@@ -55,11 +71,59 @@ const ExperienceRoute = ExperienceRouteImport.update({
   path: '/experience',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FamilyHomestayInKalpaRoute = FamilyHomestayInKalpaRouteImport.update({
+  id: '/family-homestay-in-kalpa',
+  path: '/family-homestay-in-kalpa',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HomestayInKalpaRoute = HomestayInKalpaRouteImport.update({
+  id: '/homestay-in-kalpa',
+  path: '/homestay-in-kalpa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomestayInKinnaurRoute = HomestayInKinnaurRouteImport.update({
+  id: '/homestay-in-kinnaur',
+  path: '/homestay-in-kinnaur',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomestayInReckongPeoRoute = HomestayInReckongPeoRouteImport.update({
+  id: '/homestay-in-reckong-peo',
+  path: '/homestay-in-reckong-peo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomestayInShudharangRoute = HomestayInShudharangRouteImport.update({
+  id: '/homestay-in-shudharang',
+  path: '/homestay-in-shudharang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomestayNearKinnaurKailashRoute =
+  HomestayNearKinnaurKailashRouteImport.update({
+    id: '/homestay-near-kinnaur-kailash',
+    path: '/homestay-near-kinnaur-kailash',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KalpaTravelGuideRoute = KalpaTravelGuideRouteImport.update({
+  id: '/kalpa-travel-guide',
+  path: '/kalpa-travel-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KinnaurKailashTravelGuideRoute =
+  KinnaurKailashTravelGuideRouteImport.update({
+    id: '/kinnaur-kailash-travel-guide',
+    path: '/kinnaur-kailash-travel-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MountainViewHomestayKalpaRoute =
+  MountainViewHomestayKalpaRouteImport.update({
+    id: '/mountain-view-homestay-kalpa',
+    path: '/mountain-view-homestay-kalpa',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
@@ -70,43 +134,81 @@ const RoomsRoute = RoomsRouteImport.update({
   path: '/rooms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ThingsToDoInKalpaRoute = ThingsToDoInKalpaRouteImport.update({
+  id: '/things-to-do-in-kalpa',
+  path: '/things-to-do-in-kalpa',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/blog': typeof BlogRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/experience': typeof ExperienceRoute
+  '/family-homestay-in-kalpa': typeof FamilyHomestayInKalpaRoute
   '/gallery': typeof GalleryRoute
+  '/homestay-in-kalpa': typeof HomestayInKalpaRoute
+  '/homestay-in-kinnaur': typeof HomestayInKinnaurRoute
+  '/homestay-in-reckong-peo': typeof HomestayInReckongPeoRoute
+  '/homestay-in-shudharang': typeof HomestayInShudharangRoute
+  '/homestay-near-kinnaur-kailash': typeof HomestayNearKinnaurKailashRoute
+  '/kalpa-travel-guide': typeof KalpaTravelGuideRoute
+  '/kinnaur-kailash-travel-guide': typeof KinnaurKailashTravelGuideRoute
+  '/mountain-view-homestay-kalpa': typeof MountainViewHomestayKalpaRoute
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRoute
+  '/things-to-do-in-kalpa': typeof ThingsToDoInKalpaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/blog': typeof BlogRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/experience': typeof ExperienceRoute
+  '/family-homestay-in-kalpa': typeof FamilyHomestayInKalpaRoute
   '/gallery': typeof GalleryRoute
+  '/homestay-in-kalpa': typeof HomestayInKalpaRoute
+  '/homestay-in-kinnaur': typeof HomestayInKinnaurRoute
+  '/homestay-in-reckong-peo': typeof HomestayInReckongPeoRoute
+  '/homestay-in-shudharang': typeof HomestayInShudharangRoute
+  '/homestay-near-kinnaur-kailash': typeof HomestayNearKinnaurKailashRoute
+  '/kalpa-travel-guide': typeof KalpaTravelGuideRoute
+  '/kinnaur-kailash-travel-guide': typeof KinnaurKailashTravelGuideRoute
+  '/mountain-view-homestay-kalpa': typeof MountainViewHomestayKalpaRoute
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRoute
+  '/things-to-do-in-kalpa': typeof ThingsToDoInKalpaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/blog': typeof BlogRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/experience': typeof ExperienceRoute
+  '/family-homestay-in-kalpa': typeof FamilyHomestayInKalpaRoute
   '/gallery': typeof GalleryRoute
+  '/homestay-in-kalpa': typeof HomestayInKalpaRoute
+  '/homestay-in-kinnaur': typeof HomestayInKinnaurRoute
+  '/homestay-in-reckong-peo': typeof HomestayInReckongPeoRoute
+  '/homestay-in-shudharang': typeof HomestayInShudharangRoute
+  '/homestay-near-kinnaur-kailash': typeof HomestayNearKinnaurKailashRoute
+  '/kalpa-travel-guide': typeof KalpaTravelGuideRoute
+  '/kinnaur-kailash-travel-guide': typeof KinnaurKailashTravelGuideRoute
+  '/mountain-view-homestay-kalpa': typeof MountainViewHomestayKalpaRoute
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRoute
+  '/things-to-do-in-kalpa': typeof ThingsToDoInKalpaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -114,50 +216,94 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/attractions'
+    | '/blog'
     | '/book'
     | '/contact'
     | '/dining'
     | '/experience'
+    | '/family-homestay-in-kalpa'
     | '/gallery'
+    | '/homestay-in-kalpa'
+    | '/homestay-in-kinnaur'
+    | '/homestay-in-reckong-peo'
+    | '/homestay-in-shudharang'
+    | '/homestay-near-kinnaur-kailash'
+    | '/kalpa-travel-guide'
+    | '/kinnaur-kailash-travel-guide'
+    | '/mountain-view-homestay-kalpa'
     | '/reviews'
     | '/rooms'
+    | '/things-to-do-in-kalpa'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/attractions'
+    | '/blog'
     | '/book'
     | '/contact'
     | '/dining'
     | '/experience'
+    | '/family-homestay-in-kalpa'
     | '/gallery'
+    | '/homestay-in-kalpa'
+    | '/homestay-in-kinnaur'
+    | '/homestay-in-reckong-peo'
+    | '/homestay-in-shudharang'
+    | '/homestay-near-kinnaur-kailash'
+    | '/kalpa-travel-guide'
+    | '/kinnaur-kailash-travel-guide'
+    | '/mountain-view-homestay-kalpa'
     | '/reviews'
     | '/rooms'
+    | '/things-to-do-in-kalpa'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/attractions'
+    | '/blog'
     | '/book'
     | '/contact'
     | '/dining'
     | '/experience'
+    | '/family-homestay-in-kalpa'
     | '/gallery'
+    | '/homestay-in-kalpa'
+    | '/homestay-in-kinnaur'
+    | '/homestay-in-reckong-peo'
+    | '/homestay-in-shudharang'
+    | '/homestay-near-kinnaur-kailash'
+    | '/kalpa-travel-guide'
+    | '/kinnaur-kailash-travel-guide'
+    | '/mountain-view-homestay-kalpa'
     | '/reviews'
     | '/rooms'
+    | '/things-to-do-in-kalpa'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AttractionsRoute: typeof AttractionsRoute
+  BlogRoute: typeof BlogRoute
   BookRoute: typeof BookRoute
   ContactRoute: typeof ContactRoute
   DiningRoute: typeof DiningRoute
   ExperienceRoute: typeof ExperienceRoute
+  FamilyHomestayInKalpaRoute: typeof FamilyHomestayInKalpaRoute
   GalleryRoute: typeof GalleryRoute
+  HomestayInKalpaRoute: typeof HomestayInKalpaRoute
+  HomestayInKinnaurRoute: typeof HomestayInKinnaurRoute
+  HomestayInReckongPeoRoute: typeof HomestayInReckongPeoRoute
+  HomestayInShudharangRoute: typeof HomestayInShudharangRoute
+  HomestayNearKinnaurKailashRoute: typeof HomestayNearKinnaurKailashRoute
+  KalpaTravelGuideRoute: typeof KalpaTravelGuideRoute
+  KinnaurKailashTravelGuideRoute: typeof KinnaurKailashTravelGuideRoute
+  MountainViewHomestayKalpaRoute: typeof MountainViewHomestayKalpaRoute
   ReviewsRoute: typeof ReviewsRoute
   RoomsRoute: typeof RoomsRoute
+  ThingsToDoInKalpaRoute: typeof ThingsToDoInKalpaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -181,6 +327,13 @@ declare module '@tanstack/react-router' {
       path: '/attractions'
       fullPath: '/attractions'
       preLoaderRoute: typeof AttractionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/book': {
@@ -211,11 +364,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/family-homestay-in-kalpa': {
+      id: '/family-homestay-in-kalpa'
+      path: '/family-homestay-in-kalpa'
+      fullPath: '/family-homestay-in-kalpa'
+      preLoaderRoute: typeof FamilyHomestayInKalpaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gallery': {
       id: '/gallery'
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/homestay-in-kalpa': {
+      id: '/homestay-in-kalpa'
+      path: '/homestay-in-kalpa'
+      fullPath: '/homestay-in-kalpa'
+      preLoaderRoute: typeof HomestayInKalpaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/homestay-in-kinnaur': {
+      id: '/homestay-in-kinnaur'
+      path: '/homestay-in-kinnaur'
+      fullPath: '/homestay-in-kinnaur'
+      preLoaderRoute: typeof HomestayInKinnaurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/homestay-in-reckong-peo': {
+      id: '/homestay-in-reckong-peo'
+      path: '/homestay-in-reckong-peo'
+      fullPath: '/homestay-in-reckong-peo'
+      preLoaderRoute: typeof HomestayInReckongPeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/homestay-in-shudharang': {
+      id: '/homestay-in-shudharang'
+      path: '/homestay-in-shudharang'
+      fullPath: '/homestay-in-shudharang'
+      preLoaderRoute: typeof HomestayInShudharangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/homestay-near-kinnaur-kailash': {
+      id: '/homestay-near-kinnaur-kailash'
+      path: '/homestay-near-kinnaur-kailash'
+      fullPath: '/homestay-near-kinnaur-kailash'
+      preLoaderRoute: typeof HomestayNearKinnaurKailashRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kalpa-travel-guide': {
+      id: '/kalpa-travel-guide'
+      path: '/kalpa-travel-guide'
+      fullPath: '/kalpa-travel-guide'
+      preLoaderRoute: typeof KalpaTravelGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kinnaur-kailash-travel-guide': {
+      id: '/kinnaur-kailash-travel-guide'
+      path: '/kinnaur-kailash-travel-guide'
+      fullPath: '/kinnaur-kailash-travel-guide'
+      preLoaderRoute: typeof KinnaurKailashTravelGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mountain-view-homestay-kalpa': {
+      id: '/mountain-view-homestay-kalpa'
+      path: '/mountain-view-homestay-kalpa'
+      fullPath: '/mountain-view-homestay-kalpa'
+      preLoaderRoute: typeof MountainViewHomestayKalpaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reviews': {
@@ -232,6 +448,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RoomsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/things-to-do-in-kalpa': {
+      id: '/things-to-do-in-kalpa'
+      path: '/things-to-do-in-kalpa'
+      fullPath: '/things-to-do-in-kalpa'
+      preLoaderRoute: typeof ThingsToDoInKalpaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -239,13 +462,24 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AttractionsRoute: AttractionsRoute,
+  BlogRoute: BlogRoute,
   BookRoute: BookRoute,
   ContactRoute: ContactRoute,
   DiningRoute: DiningRoute,
   ExperienceRoute: ExperienceRoute,
+  FamilyHomestayInKalpaRoute: FamilyHomestayInKalpaRoute,
   GalleryRoute: GalleryRoute,
+  HomestayInKalpaRoute: HomestayInKalpaRoute,
+  HomestayInKinnaurRoute: HomestayInKinnaurRoute,
+  HomestayInReckongPeoRoute: HomestayInReckongPeoRoute,
+  HomestayInShudharangRoute: HomestayInShudharangRoute,
+  HomestayNearKinnaurKailashRoute: HomestayNearKinnaurKailashRoute,
+  KalpaTravelGuideRoute: KalpaTravelGuideRoute,
+  KinnaurKailashTravelGuideRoute: KinnaurKailashTravelGuideRoute,
+  MountainViewHomestayKalpaRoute: MountainViewHomestayKalpaRoute,
   ReviewsRoute: ReviewsRoute,
   RoomsRoute: RoomsRoute,
+  ThingsToDoInKalpaRoute: ThingsToDoInKalpaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -41,19 +41,19 @@ export function Footer() {
               <Link to="/rooms">Rooms &amp; Suites</Link>
             </li>
             <li>
-              <Link to="/dining">Dining</Link>
+              <Link to="/homestay-in-kalpa">Homestay in Kalpa</Link>
             </li>
             <li>
-              <Link to="/experience">Kinnaur Experience</Link>
+              <Link to="/homestay-in-kinnaur">Homestay in Kinnaur</Link>
             </li>
             <li>
-              <Link to="/attractions">Nearby Attractions</Link>
+              <Link to="/homestay-in-reckong-peo">Homestay Near Reckong Peo</Link>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <Link to="/homestay-near-kinnaur-kailash">Homestay Near Kinnaur Kailash</Link>
             </li>
             <li>
-              <Link to="/book">Book Your Stay</Link>
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
         </div>

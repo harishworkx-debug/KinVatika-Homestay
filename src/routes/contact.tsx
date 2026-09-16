@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { ADDRESS, PHONE, PHONE_TEL, whatsappLink } from "@/lib/contact";
-import balconyCorridor from "../assets/balcony-corridor.png";
+import balconyCorridor from "../assets/BalconyRoom.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

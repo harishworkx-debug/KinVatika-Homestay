@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
-import heroTerrace from "../assets/hero-terrace-view.png";
-import gardenValley from "../assets/garden-valley-view.webp";
-import interiorLobby from "../assets/interior-lobby.png";
+import heroTerrace from "../assets/kinvatika-views14.png";
+import gardenValley from "../assets/kinvatika-gardan.png";
+import interiorLobby from "../assets/kinvatika-views2.png";
 
 export const Route = createFileRoute("/dining")({
   head: () => ({

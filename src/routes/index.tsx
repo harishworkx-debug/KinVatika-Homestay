@@ -28,27 +28,31 @@ import { CtaBand } from "@/components/site/CtaBand";
 import { BookingForm } from "@/components/site/BookingForm";
 import { ADDRESS, PHONE, PHONE_TEL, enquiryLink, whatsappLink } from "@/lib/contact";
 
-import heroTerrace from "../assets/hero-terrace-view.png";
-import homestayExterior from "../assets/homestay-exterior.png";
-import homestaySnow from "../assets/homestay-snow.png";
-import homestaySummer from "../assets/homestay-summer.png";
-import kinnaurKailash from "../assets/kinnaur-kailash-snow.png";
-import deluxeRoom from "../assets/deluxe-room.png";
+import heroTerrace from "../assets/food3.png";
+import homestayExterior from "../assets/kinvatika-views3.png";
+import homestaySnow from "../assets/kinvatika-views12.png";
+import homestaySummer from "../assets/kinvatika-views10.png";
+import kinnaurKailash from "../assets/kinvatika-views14.png";
+import deluxeRoom from "../assets/DeluxeMountainViewRoom.png";
 import familyRoom from "../assets/family-room.png";
-import balconyCorridor from "../assets/balcony-corridor.png";
-import interiorLobby from "../assets/interior-lobby.png";
-import gardenValley from "../assets/garden-valley-view.webp";
+import balconyCorridor from "../assets/kinvatika-views11.png";
+import interiorLobby from "../assets/gallery8.png";
+import gardenValley from "../assets/food.png";
+import momentsGallery1 from "../assets/gallery6.png";
+import momentsGallery2 from "../assets/kinvatika-views9.png.webp";
+import momentsGallery3 from "../assets/gallery9.png";
+import momentsGallery4 from "../assets/moments.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KinVatika Homestay — Best Homestay in Kalpa, Kinnaur" },
+      { title: "Best Homestay in Kalpa, Kinnaur | KinVatika Homestay" },
       {
         name: "description",
         content:
-          "Wake up to 360° Kinnaur Kailash views at KinVatika Homestay, Village Shudharang, Kalpa. Family suites, private balconies, homemade Himachali food. Book direct on WhatsApp.",
+          "Stay at KinVatika Homestay, one of the most welcoming homestays in Kalpa, Kinnaur. Enjoy mountain views, Kinnaur Kailash views, traditional Himalayan food and authentic local hospitality.",
       },
-      { property: "og:title", content: "KinVatika Homestay — Boutique Stay in Kalpa, Kinnaur" },
+      { property: "og:title", content: "Best Homestay in Kalpa, Kinnaur | KinVatika Homestay" },
       {
         property: "og:description",
         content:
@@ -140,13 +144,14 @@ function Hero() {
         <motion.h1
           className="mt-5 max-w-4xl text-5xl leading-[1.02] text-snow text-balance-tight sm:text-7xl lg:text-[5.2rem]"
         >
-          Wake Up to the Sacred Kinnaur Kailash Peaks.
+          Best Homestay in Kalpa, Kinnaur
         </motion.h1>
         <motion.p
           className="mt-6 max-w-xl text-base leading-relaxed text-snow/85 sm:text-lg"
         >
-          A peaceful Himalayan home wrapped in apple orchards — 360° mountain views, warm wooden
-          rooms and food cooked the way a Kinnauri family cooks for its own.
+          KinVatika Homestay in Shudharang, Kalpa is a family-run mountain stay with Kinnaur
+          Kailash views, apple orchards, warm rooms and homemade Himalayan food made for slow,
+          memorable stays.
         </motion.p>
         <motion.div
           className="mt-9 flex flex-wrap gap-3"
@@ -628,32 +633,32 @@ function Home() {
           <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
             <Reveal className="overflow-hidden rounded-2xl">
               <img
-                src={homestaySnow}
-                alt="KinVatika Homestay covered in snow"
+                src={momentsGallery1}
+                alt="Mountain view moments from KinVatika"
                 loading="lazy"
                 className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
               />
             </Reveal>
             <Reveal delay={0.05} className="overflow-hidden rounded-2xl">
               <img
-                src={deluxeRoom}
-                alt="Wooden deluxe room interior"
+                src={momentsGallery2}
+                alt="Room interior and mountain stay mood at KinVatika"
                 loading="lazy"
                 className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
               />
             </Reveal>
             <Reveal delay={0.1} className="overflow-hidden rounded-2xl">
               <img
-                src={heroTerrace}
-                alt="Panoramic terrace view of the Himalayas at dusk"
+                src={momentsGallery3}
+                alt="Warm dining and homestay moments in Kinnaur"
                 loading="lazy"
                 className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
               />
             </Reveal>
             <Reveal delay={0.15} className="overflow-hidden rounded-2xl">
               <img
-                src={familyRoom}
-                alt="Family room with traditional rugs"
+                src={momentsGallery4}
+                alt="Cosy bedroom and quilt moments at KinVatika Homestay"
                 loading="lazy"
                 className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
               />

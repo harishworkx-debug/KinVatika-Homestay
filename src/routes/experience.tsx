@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
-import kinnaurKailash from "../assets/kinnaur-kailash-snow.png";
-import homestaySnow from "../assets/homestay-snow.png";
-import gardenValley from "../assets/garden-valley-view.webp";
-import heroTerrace from "../assets/hero-terrace-view.png";
-import homestayExterior from "../assets/homestay-exterior.png";
+import kinnaurKailash from "../assets/Kinnaur Kailash Viewpoint.png";
+import homestaySnow from "../assets/kinvatika-views12.png";
+import gardenValley from "../assets/kinvatika-gardan.png";
+import heroTerrace from "../assets/kinvatika-views14.png";
+import homestayExterior from "../assets/kinvatika-views3.png";
 
 export const Route = createFileRoute("/experience")({
   head: () => ({
@@ -33,11 +33,11 @@ function Experience() {
   return (
     <>
       <PageHero
-        image={kinnaurKailash}
-        alt="Snow covered Kinnaur Kailash range at dawn near Kalpa"
-        eyebrow="Kinnaur Experience"
-        title="A valley that asks you to slow all the way down."
-        subtitle="Sacred peaks, orchards heavy with fruit, wooden temples, and nights so dark the Milky Way turns up uninvited."
+        image={heroTerrace}
+        alt="360° mountain view from KinVatika Homestay in Kalpa"
+        eyebrow="360° Mountain View Experience"
+        title="The peaks change colour six times before breakfast. You only have to look up."
+        subtitle="Wake up to the wide Kinnaur skyline, warm wood interiors and a sunrise that keeps changing the whole valley."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">

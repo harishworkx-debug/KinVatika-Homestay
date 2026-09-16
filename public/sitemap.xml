@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
-  <url><loc>/</loc><priority>1.0</priority></url>
-  <url><loc>/about</loc><priority>0.8</priority></url>
-  <url><loc>/rooms</loc><priority>0.9</priority></url>
-  <url><loc>/dining</loc><priority>0.7</priority></url>
-  <url><loc>/experience</loc><priority>0.7</priority></url>
-  <url><loc>/attractions</loc><priority>0.7</priority></url>
-  <url><loc>/gallery</loc><priority>0.6</priority></url>
-  <url><loc>/reviews</loc><priority>0.6</priority></url>
-  <url><loc>/contact</loc><priority>0.8</priority></url>
-  <url><loc>/book</loc><priority>0.9</priority></url>
+  <url><loc>https://kinvatika.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://kinvatika.com/about</loc><priority>0.8</priority></url>
+  <url><loc>https://kinvatika.com/rooms</loc><priority>0.9</priority></url>
+  <url><loc>https://kinvatika.com/contact</loc><priority>0.8</priority></url>
+  <url><loc>https://kinvatika.com/homestay-in-kalpa</loc><priority>0.95</priority></url>
+  <url><loc>https://kinvatika.com/homestay-in-kinnaur</loc><priority>0.9</priority></url>
+  <url><loc>https://kinvatika.com/homestay-in-reckong-peo</loc><priority>0.85</priority></url>
+  <url><loc>https://kinvatika.com/homestay-in-shudharang</loc><priority>0.85</priority></url>
+  <url><loc>https://kinvatika.com/homestay-near-kinnaur-kailash</loc><priority>0.9</priority></url>
+  <url><loc>https://kinvatika.com/mountain-view-homestay-kalpa</loc><priority>0.9</priority></url>
+  <url><loc>https://kinvatika.com/family-homestay-in-kalpa</loc><priority>0.85</priority></url>
+  <url><loc>https://kinvatika.com/things-to-do-in-kalpa</loc><priority>0.8</priority></url>
+  <url><loc>https://kinvatika.com/kalpa-travel-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://kinvatika.com/kinnaur-kailash-travel-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://kinvatika.com/attractions</loc><priority>0.7</priority></url>
+  <url><loc>https://kinvatika.com/blog</loc><priority>0.7</priority></url>
+  <url><loc>https://kinvatika.com/blog/best-homestays-in-kalpa</loc><priority>0.6</priority></url>
+  <url><loc>https://kinvatika.com/gallery</loc><priority>0.6</priority></url>
+  <url><loc>https://kinvatika.com/reviews</loc><priority>0.6</priority></url>
+  <url><loc>https://kinvatika.com/book</loc><priority>0.9</priority></url>
 </urlset>

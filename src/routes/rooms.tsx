@@ -5,10 +5,10 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
 import { PHONE_TEL, whatsappLink } from "@/lib/contact";
-import deluxeRoom from "../assets/deluxe-room.png";
+import deluxeRoom from "../assets/DeluxeMountainViewRoom.png";
 import familyRoom from "../assets/family-room.png";
-import balconyCorridor from "../assets/balcony-corridor.png";
-import interiorLobby from "../assets/interior-lobby.png";
+import balconyCorridor from "../assets/BalconyRoom.png";
+import interiorLobby from "../assets/kinvatika-views2.png";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({

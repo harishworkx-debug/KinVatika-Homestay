@@ -5,16 +5,33 @@ import { AnimatePresence, motion } from "framer-motion";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
-import heroTerrace from "../assets/hero-terrace-view.png";
-import homestayExterior from "../assets/homestay-exterior.png";
-import homestaySnow from "../assets/homestay-snow.png";
-import homestaySummer from "../assets/homestay-summer.png";
-import kinnaurKailash from "../assets/kinnaur-kailash-snow.png";
-import deluxeRoom from "../assets/deluxe-room.png";
+import heroTerrace from "../assets/kinvatika-views14.png";
+import homestayExterior from "../assets/kinvatika-views3.png";
+import homestaySnow from "../assets/kinvatika-views12.png";
+import homestaySummer from "../assets/kinvatika-views10.png";
+import kinnaurKailash from "../assets/Kinnaur Kailash Viewpoint.png";
+import deluxeRoom from "../assets/DeluxeMountainViewRoom.png";
 import familyRoom from "../assets/family-room.png";
-import balconyCorridor from "../assets/balcony-corridor.png";
-import interiorLobby from "../assets/interior-lobby.png";
-import gardenValley from "../assets/garden-valley-view.webp";
+import balconyCorridor from "../assets/BalconyRoom.png";
+import interiorLobby from "../assets/kinvatika-views2.png";
+import gardenValley from "../assets/kinvatika-gardan.png";
+import galleryImage1 from "../assets/gallery.png";
+import galleryImage2 from "../assets/gallery1.png";
+import galleryImage3 from "../assets/gallery2.png";
+import galleryImage4 from "../assets/gallery3.png";
+import galleryImage5 from "../assets/gallery5.png";
+import galleryImage6 from "../assets/gallery6.png";
+import galleryImage7 from "../assets/gallery7.png";
+import galleryImage8 from "../assets/gallery8.png";
+import galleryImage9 from "../assets/gallery9.png";
+import galleryImage10 from "../assets/gallery10.png";
+import galleryImage11 from "../assets/gallery11.png";
+import garden4 from "../assets/garden4.png";
+import foodImage from "../assets/food.png";
+import foodImage1 from "../assets/food1.png";
+
+const valleyImage = new URL("../assets/KalpaVillage.png", import.meta.url).href;
+const suicidePoint = new URL("../assets/SuicidePoint,Roghi.png", import.meta.url).href;
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -40,21 +57,34 @@ export const Route = createFileRoute("/gallery")({
 function Gallery() {
   const [active, setActive] = useState<{ src: string; alt: string } | null>(null);
 
-  const tile = (src: string, alt: string, span: string, delay: number) => (
-    <Reveal delay={delay} className={span}>
-      <figure
-        onClick={() => setActive({ src, alt })}
-        className="group h-full cursor-zoom-in overflow-hidden rounded-3xl shadow-soft"
-      >
-        <img
-          src={src}
-          alt={alt}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-110"
-        />
-      </figure>
-    </Reveal>
-  );
+  const galleryTiles = [
+    { src: heroTerrace, alt: "Panoramic Kinnaur Kailash view from the KinVatika terrace at dusk", span: "col-span-2 row-span-2", delay: 0 },
+    { src: deluxeRoom, alt: "Deluxe wooden mountain view room", span: "col-span-1", delay: 0.05 },
+    { src: balconyCorridor, alt: "Marigold-draped balcony corridor", span: "col-span-1 row-span-2", delay: 0.1 },
+    { src: kinnaurKailash, alt: "Kinnaur Kailash range in winter snow", span: "col-span-1", delay: 0.15 },
+    { src: familyRoom, alt: "Family suite with traditional Kinnauri rugs", span: "col-span-1", delay: 0.2 },
+    { src: homestaySummer, alt: "KinVatika Homestay exterior in summer", span: "col-span-2 row-span-2", delay: 0.25 },
+    { src: interiorLobby, alt: "Wooden hall with traditional chandelier", span: "col-span-1", delay: 0.3 },
+    { src: gardenValley, alt: "Garden flowers and the Kinnaur valley below", span: "col-span-1", delay: 0.35 },
+    { src: homestaySnow, alt: "The homestay after fresh snowfall", span: "col-span-2", delay: 0.4 },
+    { src: homestayExterior, alt: "Prayer flags and peaks above Kalpa", span: "col-span-2", delay: 0.45 },
+    { src: galleryImage1, alt: "KinVatika Homestay guest view in Kalpa", span: "col-span-1", delay: 0.5 },
+    { src: galleryImage2, alt: "Mountain view landscape around KinVatika Homestay", span: "col-span-1", delay: 0.55 },
+    { src: galleryImage3, alt: "Sunlit valley and village scene in Kinnaur", span: "col-span-1", delay: 0.6 },
+    { src: galleryImage4, alt: "Welcoming mountain stay in Kinnaur", span: "col-span-1", delay: 0.65 },
+    { src: galleryImage5, alt: "Himalayan view and family stay experience", span: "col-span-2", delay: 0.7 },
+    { src: galleryImage6, alt: "Moments from KinVatika and mountain life", span: "col-span-1", delay: 0.75 },
+    { src: galleryImage7, alt: "Kinnaur balcony view from the property", span: "col-span-1", delay: 0.8 },
+    { src: galleryImage8, alt: "Warm guest moments and mountain hospitality", span: "col-span-1", delay: 0.85 },
+    { src: galleryImage9, alt: "Mountain route around Kalpa and Kinnaur", span: "col-span-2", delay: 0.9 },
+    { src: galleryImage10, alt: "Village and terrace scene in Kinnaur", span: "col-span-1", delay: 0.95 },
+    { src: galleryImage11, alt: "Open landscape from KinVatika Homestay", span: "col-span-1", delay: 1 },
+    { src: valleyImage, alt: "Kalpa village landscape and mountain valley", span: "col-span-2", delay: 1.05 },
+    { src: suicidePoint, alt: "Scenic route near Suicide Point, Roghi", span: "col-span-1", delay: 1.1 },
+    { src: garden4, alt: "Garden terrace view from the homestay", span: "col-span-1", delay: 1.15 },
+    { src: foodImage, alt: "Traditional food served at KinVatika Homestay", span: "col-span-1", delay: 1.2 },
+    { src: foodImage1, alt: "Himalayan food and dining experience", span: "col-span-1", delay: 1.25 },
+  ];
 
   return (
     <>
@@ -68,26 +98,21 @@ function Gallery() {
 
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
         <div className="grid auto-rows-[16rem] grid-cols-2 gap-4 lg:grid-cols-4">
-          {tile(
-            heroTerrace,
-            "Panoramic Kinnaur Kailash view from the KinVatika terrace at dusk",
-            "col-span-2 row-span-2",
-            0,
-          )}
-          {tile(deluxeRoom, "Deluxe wooden mountain view room", "col-span-1", 0.05)}
-          {tile(balconyCorridor, "Marigold-draped balcony corridor", "col-span-1 row-span-2", 0.1)}
-          {tile(kinnaurKailash, "Kinnaur Kailash range in winter snow", "col-span-1", 0.15)}
-          {tile(familyRoom, "Family suite with traditional Kinnauri rugs", "col-span-1", 0.2)}
-          {tile(
-            homestaySummer,
-            "KinVatika Homestay exterior in summer",
-            "col-span-2 row-span-2",
-            0.25,
-          )}
-          {tile(interiorLobby, "Wooden hall with traditional chandelier", "col-span-1", 0.3)}
-          {tile(gardenValley, "Garden flowers and the Kinnaur valley below", "col-span-1", 0.35)}
-          {tile(homestaySnow, "The homestay after fresh snowfall", "col-span-2", 0.4)}
-          {tile(homestayExterior, "Prayer flags and peaks above Kalpa", "col-span-2", 0.45)}
+          {galleryTiles.map((tile) => (
+            <Reveal key={`${tile.src}-${tile.alt}`} delay={tile.delay} className={tile.span}>
+              <figure
+                onClick={() => setActive({ src: tile.src, alt: tile.alt })}
+                className="group h-full cursor-zoom-in overflow-hidden rounded-3xl shadow-soft"
+              >
+                <img
+                  src={tile.src}
+                  alt={tile.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-110"
+                />
+              </figure>
+            </Reveal>
+          ))}
         </div>
       </section>
 
