@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { ADDRESS, PHONE, PHONE_TEL, enquiryLink } from "@/lib/contact";
 
 export function Footer() {
@@ -69,6 +69,16 @@ export function Footer() {
               <Phone size={16} className="mt-0.5 shrink-0 text-gold" />
               <a href={`tel:${PHONE_TEL}`}>{PHONE}</a>
             </li>
+            <li className="flex gap-3">
+              <FaInstagram size={16} className="mt-0.5 shrink-0 text-gold" />
+              <a
+                href="https://www.instagram.com/kin_vatika_homestay/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -76,6 +86,17 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-snow/50 sm:flex-row sm:justify-between lg:px-10">
           <p>© {new Date().getFullYear()} KinVatika Homestay, Kalpa, Kinnaur.</p>
           <p>Best Homestay in Kalpa · Homestay near Kinnaur Kailash</p>
+          <p>
+            Powered by{" "}
+            <a
+              href="https://www.techhim.online/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-snow/70 transition-colors hover:text-gold"
+            >
+              TechHim Solutions
+            </a>
+          </p>
         </div>
       </div>
     </footer>
