@@ -31,8 +31,8 @@ function HomestayNearKinnaurKailash() {
       alt="Kinnaur Kailash mountain view from KinVatika Homestay in Kalpa"
       eyebrow="Homestay near Kinnaur Kailash"
       title="Homestay Near Kinnaur Kailash"
-      subtitle="A mountain stay in Kalpa with a front-row view of the sacred Kinnaur Kailash range."
-      intro="The Kinnaur Kailash range is one of the most revered sights in the Himalayas, and in Kalpa it feels close enough to touch. KinVatika Homestay offers guests the chance to wake up within this landscape, with terraces, balconies and rooms that frame the mountain in a quiet and comfortable setting."
+      subtitle="A mountain stay in Kalpa with panoramic views of the Kinnaur Kailash range."
+      intro="The Kinnaur Kailash range is one of the most important mountain landscapes in Kinnaur. KinVatika Homestay is located in Village Shudharang in the Kalpa area, where guests can enjoy panoramic views of the range from the property when weather and visibility are clear, along with a quiet village setting and comfortable rooms."
       features={[
         "Direct access to mountain-view rooms and terraces",
         "Ideal for sunrise and photography enthusiasts",
@@ -55,7 +55,14 @@ function HomestayNearKinnaurKailash() {
         { label: "Best homestay in Kalpa", href: "/homestay-in-kalpa" },
         { label: "Homestay in Kinnaur", href: "/homestay-in-kinnaur" },
         { label: "Mountain view homestay in Kalpa", href: "/mountain-view-homestay-kalpa" },
-        { label: "Thinks to do in Kalpa", href: "/things-to-do-in-kalpa" },
+        { label: "Things to Do in Kalpa", href: "/things-to-do-in-kalpa" },
+      ]}
+      contentSections={[
+        { title: "About the Kinnaur Kailash region", text: "Kinnaur Kailash is a revered Himalayan range and an important part of Kinnaur's landscape and culture. Visitors come to Kalpa for mountain views, photography, village life and a quieter way to appreciate the region." },
+        { title: "KinVatika's actual location", text: "KinVatika is in Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Kinnaur, Himachal Pradesh – 172107. It is in the Kalpa area above Reckong Peo, not in central Reckong Peo and not at the mountain itself." },
+        { title: "Views and photography", text: "When visibility is clear, guests can enjoy panoramic views of the Kinnaur Kailash range from the property's mountain-facing spaces. Early mornings and changing weather often create the best natural light, while nearby viewpoints provide additional photography opportunities." },
+        { title: "Planning nearby sightseeing", text: "Use KinVatika as a comfortable base for Kalpa village, local temples, orchard walks and scenic roads towards Roghi. Ask the family about current road conditions and practical sightseeing order before setting out." },
+        { title: "A respectful mountain visit", text: "Kinnaur is a culturally significant region. Travellers should follow local guidance, respect temple customs, avoid restricted areas and leave mountain roads and village spaces clean." },
       ]}
       ctaTitle="Book a stay near Kinnaur Kailash"
       ctaText="Experience the mountains in calm, comfortable rooms with a warm family welcome in Kalpa."

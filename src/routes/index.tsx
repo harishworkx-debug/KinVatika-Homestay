@@ -17,12 +17,6 @@ import {
   DoorOpen,
   Leaf,
 } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
 import { BookingForm } from "@/components/site/BookingForm";
@@ -74,81 +68,6 @@ export const Route = createFileRoute("/")({
       },
     ],
     links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "Where exactly is KinVatika Homestay?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "KinVatika Homestay is in Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Kinnaur, Himachal Pradesh – 172107. It is a short drive above Reckong Peo and a convenient base for exploring Kalpa and the wider Kinnaur valley.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "How do I book KinVatika Homestay?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Booking is direct. Send your dates on WhatsApp at +91 99534 93171 or call the same number for the latest availability and room rates. Direct booking is the simplest way to plan a stay in Kalpa.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Is the homestay open during winter snowfall?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. KinVatika stays open through winter with heated rooms, warm blankets and hot water. Snowfall adds to the atmosphere, but guests should confirm road conditions before travelling in heavy snow.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Is food available at the homestay?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. KinVatika serves home-cooked Himalayan food, including breakfast, vegetarian meals and local Kinnauri dishes made in our own kitchen. Many guests enjoy dining on the terrace with mountain views.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Are pets allowed?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Well-behaved pets are generally welcome, but it is best to let the family know in advance so they can prepare the room and surrounding space. This helps make the stay comfortable for both pets and other guests.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "How do we reach Kalpa?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Kalpa is easiest to reach by road from Shimla, Chandigarh or Delhi via the Kinnaur route. Many travellers arrive by private vehicle or taxi to Reckong Peo and continue uphill into Kalpa. We can help with local guidance and transfer planning.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "How far is KinVatika from Reckong Peo?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "KinVatika is in Village Shudharang, above Reckong Peo in the Kalpa area of Kinnaur. It is close enough for a short drive, making it a practical base for visitors who want mountain views without staying in a busy town centre.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "What attractions can guests visit near Kalpa?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Nearby highlights include the Kinnaur Kailash viewpoint, Kalpa village, orchard walks, temple visits and scenic valley drives around Roghi and the wider Kinnaur region. The area is known for mountain views, village culture and peaceful Himalayan scenery.",
-              },
-            },
-          ],
-        }),
-      },
-    ],
   }),
   component: Home,
 });
@@ -674,7 +593,7 @@ function Home() {
         <Reveal className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
             <p className="eyebrow text-pine">Nearby Attractions</p>
-            <h2 className="mt-4 text-4xl sm:text-5xl">Explore the Best Places to Visit Near Kalpa</h2>
+            <h2 className="mt-4 text-4xl sm:text-5xl">Places to Visit Near KinVatika Homestay</h2>
           </div>
           <Link
             to="/attractions"
@@ -694,9 +613,7 @@ function Home() {
               />
               <div className="p-7">
                 <h3 className="text-2xl">Kinnaur Kailash Viewpoint</h3>
-                <p className="mt-2 text-xs tracking-widest text-gold uppercase">
-                  Short drive from Kalpa
-                </p>
+                <p className="mt-2 text-xs tracking-widest text-gold uppercase">Scenic mountain viewpoint</p>
               </div>
             </article>
           </Reveal>
@@ -710,9 +627,7 @@ function Home() {
               />
               <div className="p-7">
                 <h3 className="text-2xl">Kalpa Village</h3>
-                <p className="mt-2 text-xs tracking-widest text-gold uppercase">
-                  Local village walk
-                </p>
+                <p className="mt-2 text-xs tracking-widest text-gold uppercase">Village lanes and local culture</p>
               </div>
             </article>
           </Reveal>
@@ -726,65 +641,11 @@ function Home() {
               />
               <div className="p-7">
                 <h3 className="text-2xl">Suicide Point, Roghi</h3>
-                <p className="mt-2 text-xs tracking-widest text-gold uppercase">
-                  Scenic valley drive
-                </p>
+                <p className="mt-2 text-xs tracking-widest text-gold uppercase">Scenic road through the valley</p>
               </div>
             </article>
           </Reveal>
-        </div>
-      </section>
-
-      {/* Gallery preview */}
-      <section className="bg-secondary/60">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-          <Reveal className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <p className="eyebrow text-pine">Gallery</p>
-              <h2 className="mt-4 text-4xl sm:text-5xl">Moments from KinVatika</h2>
-            </div>
-            <Link
-              to="/gallery"
-              className="rounded-full border border-pine px-7 py-3 text-[0.72rem] tracking-widest text-pine uppercase transition hover:bg-pine hover:text-snow"
-            >
-              Full gallery
-            </Link>
-          </Reveal>
-          <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            <Reveal className="overflow-hidden rounded-2xl">
-              <img
-                src={momentsGallery1}
-                alt="Mountain view moments from KinVatika"
-                loading="lazy"
-                className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
-              />
-            </Reveal>
-            <Reveal delay={0.05} className="overflow-hidden rounded-2xl">
-              <img
-                src={momentsGallery2}
-                alt="Room interior and mountain stay mood at KinVatika"
-                loading="lazy"
-                className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
-              />
-            </Reveal>
-            <Reveal delay={0.1} className="overflow-hidden rounded-2xl">
-              <img
-                src={momentsGallery3}
-                alt="Warm dining and homestay moments in Kinnaur"
-                loading="lazy"
-                className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
-              />
-            </Reveal>
-            <Reveal delay={0.15} className="overflow-hidden rounded-2xl">
-              <img
-                src={momentsGallery4}
-                alt="Cosy bedroom and quilt moments at KinVatika Homestay"
-                loading="lazy"
-                className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
-              />
-            </Reveal>
           </div>
-        </div>
       </section>
 
       {/* Testimonials */}
@@ -839,66 +700,22 @@ function Home() {
             <h2 className="mt-4 text-4xl sm:text-5xl">Good to know before you arrive</h2>
           </Reveal>
           <Reveal delay={0.1} className="mt-12">
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="1">
-                <AccordionTrigger className="text-left text-lg">
-                  Where exactly is KinVatika Homestay?
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  Village Shudharang, Post Office &amp; Tehsil Reckong Peo, Kalpa, Himachal Pradesh
-                  172107 — a short drive above Reckong Peo and minutes from Kalpa village.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="2">
-                <AccordionTrigger className="text-left text-lg">How do I book?</AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  Send your dates on WhatsApp to +91 99534 93171 or call the same number. Booking
-                  direct always gets you our best rate.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="3">
-                <AccordionTrigger className="text-left text-lg">
-                  Is the homestay open during winter snowfall?
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  Yes. Rooms are heated, hot water is available, and Kalpa under snow is the most
-                  beautiful time to visit. Please confirm road conditions with us before travelling.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="4">
-                <AccordionTrigger className="text-left text-lg">
-                  Is food included and are pets allowed?
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  Homemade meals are available on request; breakfast packages can be added to your
-                  booking. Well-behaved pets are welcome — just tell us in advance.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="5">
-                <AccordionTrigger className="text-left text-lg">
-                  How do we reach Kalpa?
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  Kalpa is easiest to reach by road from Shimla, Chandigarh or Delhi via the Kinnaur route. Many travellers arrive by private vehicle or taxi to Reckong Peo and continue uphill into Kalpa. If you are planning the journey, our team can help with local guidance and transfer support.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="6">
-                <AccordionTrigger className="text-left text-lg">
-                  How far is KinVatika from Reckong Peo?
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  KinVatika is in Village Shudharang, above Reckong Peo in the Kalpa area of Kinnaur. It is close enough for a short drive, making it a practical base for visitors who want mountain views without staying in a busy town centre.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="7">
-                <AccordionTrigger className="text-left text-lg">
-                  What attractions can guests visit near Kalpa?
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  Nearby highlights include the Kinnaur Kailash viewpoint, Kalpa village, orchard walks, temple visits and scenic valley drives around Roghi and the wider Kinnaur region. The area is known for mountain views, village culture and peaceful Himalayan scenery.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+            <div className="w-full divide-y divide-border/80">
+              {[
+                ["Where exactly is KinVatika Homestay?", "KinVatika Homestay is at Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Kinnaur, Himachal Pradesh – 172107. It is above Reckong Peo in the Kalpa area, not in central Reckong Peo."],
+                ["How do I book?", "Send your dates and guest details on WhatsApp at +91 99534 93171 or call the same number. The family can confirm availability, room options and current direct-booking rates."],
+                ["Is the homestay open during winter snowfall?", "KinVatika welcomes winter guests with heated rooms, warm bedding and hot water. Please check current road and weather conditions with the property before travelling during heavy snowfall."],
+                ["Is food included and are pets allowed?", "Homemade Himachali and Kinnauri meals are available on request; whether meals are included depends on the booking plan. Well-behaved pets may be accommodated when arranged in advance with the family."],
+                ["How do we reach Kalpa?", "Kalpa is reached by road via Reckong Peo from Shimla, Chandigarh or Delhi. Travellers usually come by private vehicle, taxi or bus to Reckong Peo and continue uphill to Kalpa; the hosts can share local route guidance."],
+                ["How far is KinVatika from Reckong Peo?", "KinVatika is in Village Shudharang, above Reckong Peo in the Kalpa area of Kinnaur. It offers access to the town while keeping the property in a quieter village setting."],
+                ["What attractions can guests visit near Kalpa?", "Guests can visit Kalpa village, Kinnaur Kailash viewpoints, local temples, apple orchards and the scenic road towards Roghi. Travel times vary with road and weather conditions, so the family can advise on the day."],
+              ].map(([question, answer]) => (
+                <article key={question} className="py-6 first:pt-0 last:pb-0">
+                  <h3 className="text-lg text-forest">{question}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{answer}</p>
+                </article>
+              ))}
+            </div>
           </Reveal>
         </div>
       </section>

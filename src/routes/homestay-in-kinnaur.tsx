@@ -51,6 +51,13 @@ function HomestayInKinnaur() {
         { q: "Is it good for a family stay in Kinnaur?", a: "Yes. Families prefer it for its comfortable rooms, warm hospitality and the quiet environment around the property." },
         { q: "How far is it from Kalpa?", a: "The property is in the Kalpa area, close to the village and prominent viewpoints of Kinnaur Kailash." },
       ]}
+      contentSections={[
+        { title: "Understanding Kinnaur", text: "Kinnaur is a high-mountain district with apple-growing villages, changing landscapes, old temples and long road journeys between settlements. A family homestay offers a slower way to experience the region than passing through in one day." },
+        { title: "Why base yourself near Kalpa?", text: "KinVatika is in Village Shudharang in the Kalpa area, giving guests a peaceful village setting with access to Kalpa, Reckong Peo and nearby sightseeing routes. The property is not located in central Reckong Peo." },
+        { title: "What to expect from the stay", text: "Guests can plan around mountain views, orchard surroundings, warm rooms, home-cooked food and locally informed travel advice. Weather and road conditions can change quickly, so flexible planning is useful in Kinnaur." },
+        { title: "Food and local hospitality", text: "The family prepares homemade Himachali and Kinnauri-style meals, with vegetarian choices and breakfast arrangements available by request. Ask when booking about the menu, timing and dietary needs." },
+        { title: "Planning a Kinnaur road trip", text: "Keep extra time for mountain roads, fuel and weather changes. Kalpa and Reckong Peo are useful points on a wider Kinnaur itinerary, while the hosts can help you plan sensible local excursions." },
+      ]}
       relatedLinks={[
         { label: "Best homestay in Kalpa", href: "/homestay-in-kalpa" },
         { label: "Homestay near Reckong Peo", href: "/homestay-in-reckong-peo" },

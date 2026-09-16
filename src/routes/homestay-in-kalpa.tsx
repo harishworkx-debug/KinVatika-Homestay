@@ -52,6 +52,16 @@ function HomeStayInKalpa() {
         { q: "Does the property have mountain views?", a: "Yes. Guests can enjoy excellent Kinnaur Kailash views and Himalayan scenery from the terrace, balconies and bedrooms." },
         { q: "Is this a family homestay in Kalpa?", a: "Yes. We welcome families, couples and groups seeking a peaceful and comfortable stay in the valley." },
       ]}
+      contentSections={[
+        { title: "About Kalpa", text: "Kalpa is a mountain village in Kinnaur known for apple orchards, traditional architecture, clear Himalayan light and views towards the Kinnaur Kailash range. It is a rewarding base for travellers who prefer village life and scenery over a crowded town centre." },
+        { title: "Why stay in Kalpa?", text: "A stay in Kalpa gives you time for sunrise views, orchard walks, local temples and quiet evenings. It also works well as part of a longer Kinnaur road trip, with Reckong Peo serving as the nearby practical town for transport and supplies." },
+        { title: "Why choose KinVatika?", text: "KinVatika combines comfortable rooms, family hospitality, open mountain views and homemade Himachali and Kinnauri food. The family can also share local guidance for viewpoints, road conditions and sightseeing plans." },
+        { title: "Places to visit near Kalpa", text: "Guests commonly explore Kalpa village, Kinnaur Kailash viewpoints, local temples, apple orchards and the scenic road towards Roghi. Exact travel time changes with weather, road work and traffic, so ask the hosts for current advice." },
+        { title: "Things to do in Kalpa", text: "Plan slow mornings on the terrace, walk through village lanes, photograph changing mountain light, visit cultural sites and enjoy local food. Kalpa is best experienced with enough time to pause between journeys." },
+        { title: "Best time to visit Kalpa", text: "Spring and summer bring clearer road-trip conditions and orchard greenery, autumn is associated with harvest colours, and winter offers snow when conditions allow. Check current weather and road access before every seasonal journey." },
+        { title: "How to reach Kalpa", text: "Kalpa is reached by road via Reckong Peo from Shimla and the lower Himachal route. Travellers use private vehicles, taxis or buses to reach Reckong Peo and then continue uphill. KinVatika can help with local route guidance." },
+        { title: "Rooms, food and mountain views", text: "KinVatika offers warm rooms for couples, families and groups, with mountain-facing spaces and access to terrace views. Homemade meals, vegetarian options and breakfast can be arranged with the family when booking." },
+      ]}
       relatedLinks={[
         { label: "Homestay in Kinnaur", href: "/homestay-in-kinnaur" },
         { label: "Homestay near Kinnaur Kailash", href: "/homestay-near-kinnaur-kailash" },

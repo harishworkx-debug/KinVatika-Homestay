@@ -2,7 +2,7 @@ export const PHONE = "+91 99534 93171";
 export const PHONE_TEL = "+919953493171";
 export const WHATSAPP_NUMBER = "919953493171";
 export const ADDRESS =
-  "Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Himachal Pradesh – 172107";
+  "Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Kinnaur, Himachal Pradesh – 172107";
 export const PROPERTY_NAME = "KinVatika Homestay";
 
 export function whatsappLink(message: string) {

@@ -1,4 +1,3 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaBand } from "@/components/site/CtaBand";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
@@ -21,6 +20,7 @@ export function LocationPage({
   ctaTitle,
   ctaText,
   ctaMessage,
+  contentSections = [],
 }: {
   image: string;
   alt: string;
@@ -35,6 +35,7 @@ export function LocationPage({
   ctaTitle: string;
   ctaText: string;
   ctaMessage: string;
+  contentSections?: { title: string; text: string }[];
 }) {
   return (
     <>
@@ -85,6 +86,23 @@ export function LocationPage({
         </div>
       </section>
 
+      {contentSections.length > 0 && (
+        <section className="bg-secondary/60">
+          <div className="mx-auto max-w-6xl px-6 py-20 lg:px-10 lg:py-28">
+            <div className="grid gap-6 md:grid-cols-2">
+              {contentSections.map((section, index) => (
+                <Reveal key={section.title} delay={index * 0.05}>
+                  <article className="h-full rounded-2xl border border-border/70 bg-card p-7 shadow-soft">
+                    <h2 className="text-2xl text-forest">{section.title}</h2>
+                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{section.text}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="bg-secondary/60">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-10 lg:py-28">
           <Reveal className="max-w-2xl">
@@ -128,14 +146,14 @@ export function LocationPage({
             <h2 className="mt-4 text-4xl sm:text-5xl">Helpful answers before you book</h2>
           </Reveal>
           <Reveal delay={0.08} className="mt-12">
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={faq.q} value={`faq-${index}`}>
-                  <AccordionTrigger className="text-left text-lg">{faq.q}</AccordionTrigger>
-                  <AccordionContent className="text-sm leading-relaxed text-muted-foreground">{faq.a}</AccordionContent>
-                </AccordionItem>
+            <div className="w-full divide-y divide-border/80">
+              {faqs.map((faq) => (
+                <article key={faq.q} className="py-6 first:pt-0 last:pb-0">
+                  <h3 className="text-lg text-forest">{faq.q}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                </article>
               ))}
-            </Accordion>
+            </div>
           </Reveal>
         </div>
       </section>
