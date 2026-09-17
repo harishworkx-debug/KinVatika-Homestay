@@ -31,6 +31,10 @@ import deluxeRoom from "../assets/DeluxeMountainViewRoom.png";
 import familyRoom from "../assets/family-room.png";
 import balconyCorridor from "../assets/kinvatika-views11.png";
 import balconyCorridor2 from "../assets/balcony-room3.png";
+import kinnaurKailash2 from "../assets/SuicidePoint,Roghi.png";
+import kinnaurKailash3 from "../assets/Kinnaur-Kailash Viewpoint.png";
+
+
 
 import interiorLobby from "../assets/kinvatika-views7.png";
 import interiorLobby2 from "../assets/gallery8.png";
@@ -606,7 +610,7 @@ function Home() {
           <Reveal>
             <article className="group overflow-hidden rounded-3xl bg-card shadow-soft">
               <img
-                src={kinnaurKailash}
+                src={kinnaurKailash3}
                 alt="Kinnaur Kailash viewpoint near Kalpa in winter snow"
                 loading="lazy"
                 className="h-64 w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
@@ -634,7 +638,7 @@ function Home() {
           <Reveal delay={0.16}>
             <article className="group overflow-hidden rounded-3xl bg-card shadow-soft">
               <img
-                src={gardenValley}
+                src={kinnaurKailash2}
                 alt="Valley road towards Roghi village and Suicide Point"
                 loading="lazy"
                 className="h-64 w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
