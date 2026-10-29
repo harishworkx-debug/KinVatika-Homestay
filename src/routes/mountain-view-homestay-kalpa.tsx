@@ -5,21 +5,26 @@ import heroTerrace from "../assets/kinvatika-views14.png";
 export const Route = createFileRoute("/mountain-view-homestay-kalpa")({
   head: () => ({
     meta: [
-      { title: "Mountain View Homestay in Kalpa | KinVatika" },
+      { title: "Mountain View Homestay in Kalpa | KinVatika Homestay" },
       {
         name: "description",
         content:
-          "Find a mountain view homestay in Kalpa at KinVatika Homestay. Enjoy Kinnaur Kailash views, a quiet terrace, orchard surroundings and warm Himalayan hospitality.",
+          "Wake to direct sunrise views of the sacred Kinnaur Kailash (6,050m) and Jorkanden massif from your bed, private balcony and open terrace at KinVatika Homestay in Kalpa.",
       },
       { property: "og:title", content: "Mountain View Homestay in Kalpa | KinVatika" },
       {
         property: "og:description",
         content:
-          "A peaceful mountain-view homestay in Kalpa with Kinnaur Kailash scenery, balconies and orchard surroundings.",
+          "Panoramic Kinnaur Kailash massif view, golden alpenglow at dawn, private balcony rooms and apple orchard setting in Kalpa.",
       },
-      { property: "og:url", content: "https://www.kinvatikahomestay.com/mountain-view-homestay-kalpa" },
+      {
+        property: "og:url",
+        content: "https://www.kinvatikahomestay.com/mountain-view-homestay-kalpa",
+      },
     ],
-    links: [{ rel: "canonical", href: "https://www.kinvatikahomestay.com/mountain-view-homestay-kalpa" }],
+    links: [
+      { rel: "canonical", href: "https://www.kinvatikahomestay.com/mountain-view-homestay-kalpa" },
+    ],
   }),
   component: MountainViewHomestayKalpa,
 });
@@ -29,37 +34,60 @@ function MountainViewHomestayKalpa() {
     <LocationPage
       image={heroTerrace}
       alt="Mountain view homestay in Kalpa with Kinnaur Kailash skyline"
-      eyebrow="Mountain view homestay"
+      eyebrow="Panoramic Himalayan Views"
       title="Mountain View Homestay in Kalpa"
-      subtitle="A scenic stay with open mountain views, quiet surroundings and the comfort of a true family homestay."
-      intro="KinVatika Homestay is the kind of place travellers look for when they want a mountain-view stay in Kalpa without the rush of a hotel. The views are expansive, the air is quiet, and the property is set among orchard and valley landscapes that give you a real sense of Kinnaur."
+      subtitle="Direct panoramic view of the 6,050m Kinnaur Kailash range from private balconies, bedrooms, and the open rooftop terrace."
+      intro="For photographers, writers, and mountain lovers, the view is the journey. Positioned on an open hillside ridge in Village Shudharang at 2,900 metres, KinVatika Homestay looks directly across the Sutlej river gorge toward the sacred Kinnaur Kailash (6,050m) and Jorkanden (6,473m) peaks. When visibility is clear, the snow-draped massifs change colour from soft violet to fiery gold before breakfast—a spectacle you can witness without ever leaving your warm quilt."
       features={[
-        "Balcony and terrace seating for open-air views",
-        "Kinnaur Kailash views from the property and surrounding spaces",
-        "Quiet apple orchard surroundings and calm mountain air",
-        "Comfortable rooms for couples, families and slow travellers",
-        "Fresh homemade food and warm family hospitality",
-        "Beautiful Himalayan scenery throughout the day",
+        "Unobstructed 180° views of the Kinnaur Kailash and Jorkanden range",
+        "East-facing private balconies positioned for dawn golden hour light",
+        "Expansive open rooftop terrace for 360° valley & peak photography",
+        "High-altitude star gazing with near-zero village light pollution",
+        "Large soundproof glass windows framing snow peaks from the bed",
+        "Outdoor tea & breakfast seating facing the Himalayan ridge",
       ]}
       whyStay={[
-        "A mountain-view homestay in Kalpa is about more than the room — it is about the way the whole property feels. Here, the sunrise, the sound of the valley and the view of the peaks are part of the stay itself.",
-        "The terrace and balconies are ideal for tea, quiet reading and photography. In the evenings, the valley turns golden and the snow line glows against the sky.",
-        "The property keeps a warm, respectful family atmosphere, which makes it especially suitable for guests who want a personal and authentic Himalayan stay.",
+        "The Magic of Alpenglow: At sunrise (typically 5:45 AM in summer to 6:45 AM in autumn), the very tip of the Kinnaur Kailash rock formation catches the first ray of sunlight, turning blazing crimson-gold while the valley below remains in deep blue shadow.",
+        "Clear Sky Seasons: The clearest mountain view windows are September through November (post-monsoon crystal skies and apple orchards) and April through June (pleasant warmth with heavy snow on the high peaks).",
+        "Night Sky & Astrophotography: Village Shudharang has minimal street lighting. On moonless nights, the Milky Way core arches directly over the Kailash massif, making our terrace a dream location for astrophotographers.",
+      ]}
+      contentSections={[
+        {
+          title: "Photography Timings & Angles from the Property",
+          text: "Sunrise faces the property directly across the eastern valley. Telephoto lenses (70-200mm) capture dramatic close-ups of the 79-foot natural rock Shivling of Kailash, while wide-angle lenses (16-35mm) capture the homestay's apple trees in the foreground with the full Himalayan wall behind.",
+        },
+        {
+          title: "Seasonal Mountain Scenery Guide",
+          text: "Autumn (Sept-Nov): Deep royal blue skies, brilliant contrast, and red apples hanging in the orchards. Winter (Dec-March): Kalpa receives heavy snowfall; the homestay and all surrounding pine ridges are blanketed in white. Summer (April-June): Blooming apple blossoms and comfortable daytime terrace weather.",
+        },
+        {
+          title: "Rooms with Direct Mountain Views",
+          text: "Both our Deluxe Mountain View Rooms and Balcony Rooms feature large view-facing windows and private sit-out balconies so you can enjoy the Himalayan horizon in total privacy.",
+        },
       ]}
       faqs={[
-        { q: "Does KinVatika have mountain views?", a: "Yes. The homestay is situated in a location that allows guests to enjoy mountain views and the Kinnaur Kailash range from the terrace and bedrooms." },
-        { q: "Is it good for a quiet mountain stay?", a: "Yes. The area is peaceful, and the property is ideal for travellers seeking calm, privacy and scenic surroundings." },
-        { q: "Is there a balcony or terrace?", a: "Yes. The property has open spaces and balconies where guests can sit and enjoy the view with tea or meals." },
+        {
+          q: "Is Kinnaur Kailash visible directly from the bedrooms?",
+          a: "Yes. Our Deluxe Mountain View Rooms and Balcony Rooms are east-facing and feature large panorama windows specifically designed to frame the Kinnaur Kailash massif from the bed.",
+        },
+        {
+          q: "What is the best time of year for mountain views in Kalpa?",
+          a: "September to mid-November offers the most consistently crystal-clear skies with virtually zero haze. April and May are also fantastic with snow-covered peaks and blooming flowers.",
+        },
+        {
+          q: "Can we have breakfast or evening tea on the terrace?",
+          a: "Absolutely. Our open terrace has comfortable seating where guests frequently enjoy morning chai and hot parathas facing the sunrise over the peaks.",
+        },
       ]}
       relatedLinks={[
-        { label: "Best homestay in Kalpa", href: "/homestay-in-kalpa" },
-        { label: "Homestay near Kinnaur Kailash", href: "/homestay-near-kinnaur-kailash" },
-        { label: "Family homestay in Kalpa", href: "/family-homestay-in-kalpa" },
+        { label: "View Deluxe Mountain View Room", href: "/rooms" },
         { label: "Kinnaur Kailash travel guide", href: "/kinnaur-kailash-travel-guide" },
+        { label: "Photo gallery", href: "/gallery" },
+        { label: "Best homestay in Kalpa", href: "/homestay-in-kalpa" },
       ]}
-      ctaTitle="Enjoy a mountain-view stay in Kalpa"
-      ctaText="Book your room today and wake up to the Kinnaur valley and sacred mountain light."
-      ctaMessage="Hello KinVatika Homestay! I am looking for a mountain view room in Kalpa and would like availability."
+      ctaTitle="Wake up to Kinnaur Kailash"
+      ctaText="Check room availability for mountain-view rooms and experience the Himalayas at dawn."
+      ctaMessage="Hello KinVatika Homestay! I would like to book a mountain-view room with Kinnaur Kailash views."
     />
   );
 }

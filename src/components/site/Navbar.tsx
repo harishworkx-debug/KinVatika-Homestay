@@ -10,9 +10,11 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/rooms", label: "Rooms" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/homestay-in-kalpa", label: "Kalpa" },
   { to: "/homestay-in-kinnaur", label: "Kinnaur" },
   { to: "/attractions", label: "Nearby" },
+  { to: "/reviews", label: "Reviews" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
@@ -45,23 +47,15 @@ export function Navbar() {
           <Link to="/" className="group flex items-baseline gap-2">
             <span
               className={cn(
-                "font-display text-2xl tracking-tight transition-colors",
+                "font-display text-xl sm:text-2xl tracking-tight transition-colors",
                 scrolled ? "text-forest" : "text-snow",
               )}
             >
-              KinVatika
-            </span>
-            <span
-              className={cn(
-                "eyebrow hidden sm:block transition-colors",
-                scrolled ? "text-muted-foreground" : "text-snow/70",
-              )}
-            >
-              Kalpa
+              KinVatika Homestay
             </span>
           </Link>
 
-          <ul className="hidden items-center gap-7 lg:flex">
+          <ul className="hidden items-center gap-4 xl:gap-6 lg:flex">
             {links.map((l) => (
               <li key={l.to}>
                 <Link
@@ -93,10 +87,7 @@ export function Navbar() {
             <button
               aria-label="Open menu"
               onClick={() => setOpen((v) => !v)}
-              className={cn(
-                "rounded-full p-2 lg:hidden",
-                scrolled ? "text-charcoal" : "text-snow",
-              )}
+              className={cn("rounded-full p-2 lg:hidden", scrolled ? "text-charcoal" : "text-snow")}
             >
               {open ? <X size={22} /> : <Menu size={22} />}
             </button>

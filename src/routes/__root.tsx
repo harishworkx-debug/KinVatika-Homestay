@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -35,11 +36,13 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportLovableError(error instanceof Error ? error : new Error(String(error)), {
+      boundary: "tanstack_root_error_component",
+    });
   }, [error]);
 
   return (
@@ -109,30 +112,60 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Hotel",
-          name: "KinVatika Homestay",
-          description:
-            "Boutique family homestay in Kalpa, Kinnaur with panoramic Kinnaur Kailash views, private balconies and homemade Himachali meals.",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "Village Shudharang, Post Office & Tehsil Reckong Peo",
-            addressLocality: "Kalpa",
-            addressRegion: "Himachal Pradesh",
-            postalCode: "172107",
-            addressCountry: "IN",
-          },
-          geo: { "@type": "GeoCoordinates", latitude: 31.5292, longitude: 78.2668 },
-          telephone: "+919953493171",
-          priceRange: "₹₹",
-          amenityFeature: [
-            "Mountain View",
-            "Free Wi-Fi",
-            "Free Parking",
-            "Family Rooms",
-            "Heating",
-            "Garden",
-            "Terrace",
-          ].map((n) => ({ "@type": "LocationFeatureSpecification", name: n, value: true })),
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://www.kinvatikahomestay.com/#website",
+              url: "https://www.kinvatikahomestay.com/",
+              name: "KinVatika Homestay",
+              alternateName: [
+                "KinVatika",
+                "Kin Vatika",
+                "KinVatika Homestay Kalpa",
+                "Kin Vatika Homestay",
+                "KinVatika Kinnaur",
+              ],
+              description:
+                "Boutique family homestay in Kalpa, Kinnaur with panoramic Kinnaur Kailash views, private balconies and homemade Himachali meals.",
+            },
+            {
+              "@type": ["Hotel", "BedAndBreakfast", "LodgingBusiness"],
+              "@id": "https://www.kinvatikahomestay.com/#hotel",
+              name: "KinVatika Homestay",
+              url: "https://www.kinvatikahomestay.com/",
+              image: "https://www.kinvatikahomestay.com/favicon.png",
+              description:
+                "Boutique family homestay in Kalpa, Kinnaur with panoramic Kinnaur Kailash views, private balconies and homemade Himachali meals.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Village Shudharang, Post Office & Tehsil Reckong Peo",
+                addressLocality: "Kalpa",
+                addressRegion: "Himachal Pradesh",
+                postalCode: "172107",
+                addressCountry: "IN",
+              },
+              geo: { "@type": "GeoCoordinates", latitude: 31.5292, longitude: 78.2668 },
+              hasMap: "https://maps.google.com/?cid=6419984955728821719",
+              sameAs: [
+                "https://www.instagram.com/kin_vatika_homestay/",
+                "https://www.tripadvisor.com/ShowUserReviews-g26778681-d26777973-r953402271",
+                "https://maps.google.com/?cid=6419984955728821719",
+              ],
+              telephone: "+919953493171",
+              priceRange: "₹₹",
+              amenityFeature: [
+                "Mountain View",
+                "Kinnaur Kailash View",
+                "Free Wi-Fi",
+                "Free Parking",
+                "Family Rooms",
+                "Heating",
+                "Garden",
+                "Terrace",
+                "Homemade Food",
+              ].map((n) => ({ "@type": "LocationFeatureSpecification", name: n, value: true })),
+            },
+          ],
         }),
       },
     ],
@@ -169,4 +202,3 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
-

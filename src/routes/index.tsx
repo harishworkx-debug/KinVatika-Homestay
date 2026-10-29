@@ -21,6 +21,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { CtaBand } from "@/components/site/CtaBand";
 import { BookingForm } from "@/components/site/BookingForm";
 import { ADDRESS, PHONE, PHONE_TEL, enquiryLink, whatsappLink } from "@/lib/contact";
+import { ALL_REVIEWS, REVIEWS_OVERVIEW } from "@/data/reviewsData";
 
 import heroTerrace from "../assets/food3.png";
 import homestayExterior from "../assets/kinvatika-views3.png";
@@ -33,8 +34,6 @@ import balconyCorridor from "../assets/kinvatika-views11.png";
 import balconyCorridor2 from "../assets/balcony-room3.png";
 import kinnaurKailash2 from "../assets/SuicidePoint,Roghi.png";
 import kinnaurKailash3 from "../assets/Kinnaur-Kailash Viewpoint.png";
-
-
 
 import interiorLobby from "../assets/kinvatika-views7.png";
 import interiorLobby2 from "../assets/gallery8.png";
@@ -53,18 +52,17 @@ import family from "../assets/family.png";
 import family1 from "../assets/family1.png";
 import family2 from "../assets/family2.png";
 
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Best Homestay in Kalpa, Kinnaur | KinVatika Homestay" },
+      { title: "KinVatika Homestay | Official Website in Kalpa, Kinnaur" },
       {
         name: "description",
         content:
-          "Stay at KinVatika Homestay, one of the most welcoming homestays in Kalpa, Kinnaur. Enjoy mountain views, Kinnaur Kailash views, traditional Himalayan food and authentic local hospitality.",
+          "Official website of KinVatika Homestay in Village Shudharang, Kalpa, Kinnaur. Boutique mountain-view rooms, panoramic Kinnaur Kailash views, homemade Himachali food and authentic family hospitality.",
       },
       { property: "og:url", content: "https://www.kinvatikahomestay.com/" },
-      { property: "og:title", content: "Best Homestay in Kalpa, Kinnaur | KinVatika Homestay" },
+      { property: "og:title", content: "KinVatika Homestay | Official Website in Kalpa, Kinnaur" },
       {
         property: "og:description",
         content:
@@ -123,29 +121,20 @@ function Hero() {
       </motion.div>
       <div className="hero-overlay absolute inset-0" />
 
-      <motion.div
-        className="relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-10"
-      >
-        <motion.p
-          className="eyebrow text-gold"
-        >
-          Village Shudharang · Kalpa · Kinnaur
-        </motion.p>
-        <motion.h1
-          className="mt-5 max-w-4xl text-5xl leading-[1.02] text-snow text-balance-tight sm:text-7xl lg:text-[5.2rem]"
-        >
-          Best Homestay in Kalpa, Kinnaur
+      <motion.div className="relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-10">
+        <motion.p className="eyebrow text-gold">Village Shudharang · Kalpa · Kinnaur</motion.p>
+        <motion.h1 className="mt-5 max-w-4xl text-5xl leading-[1.02] text-snow text-balance-tight sm:text-7xl lg:text-[5.2rem]">
+          Welcome to KinVatika Homestay
         </motion.h1>
-        <motion.p
-          className="mt-6 max-w-xl text-base leading-relaxed text-snow/85 sm:text-lg"
-        >
-          KinVatika Homestay in Shudharang, Kalpa is a family-run mountain stay with Kinnaur
-          Kailash views, apple orchards, warm rooms and homemade Himalayan food made for slow,
-          memorable stays.
+        <motion.p className="mt-3 font-display text-2xl text-gold sm:text-3xl">
+          A Family-Run Mountain Stay in Shudharang, Kalpa
         </motion.p>
-        <motion.div
-          className="mt-9 flex flex-wrap gap-3"
-        >
+        <motion.p className="mt-5 max-w-xl text-base leading-relaxed text-snow/85 sm:text-lg">
+          KinVatika Homestay in Shudharang, Kalpa is an authentic mountain home with Kinnaur Kailash
+          views, apple orchards, warm rooms and homemade Himalayan food made for slow, memorable
+          stays.
+        </motion.p>
+        <motion.div className="mt-9 flex flex-wrap gap-3">
           <a
             href={enquiryLink}
             target="_blank"
@@ -255,29 +244,33 @@ function Home() {
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
           <Reveal>
-            <p className="eyebrow text-pine">Best Homestay in Kalpa, Kinnaur</p>
+            <p className="eyebrow text-pine">Authentic Mountain Stay in Kalpa</p>
             <h2 className="mt-5 text-4xl leading-tight sm:text-5xl">
-              A peaceful family homestay in Village Shudharang, close to Kalpa and the Kinnaur Kailash range.
+              A peaceful family homestay in Village Shudharang, close to Kalpa and the Kinnaur
+              Kailash range.
             </h2>
             <div className="mt-8 space-y-5 text-[0.98rem] leading-loose text-muted-foreground">
               <p>
-                KinVatika Homestay is a warm, family-run place to stay in the heart of Kinnaur, where mountain light,
-                orchard air and a slower village rhythm make every day feel memorable. We are based in Village
-                Shudharang, in the Kalpa region, close to Kalpa, the wider Kinnaur valley and famous Kinnaur Kailash views.
+                KinVatika Homestay is a warm, family-run place to stay in the heart of Kinnaur,
+                where mountain light, orchard air and a slower village rhythm make every day feel
+                memorable. We are based in Village Shudharang, in the Kalpa region, close to Kalpa,
+                the wider Kinnaur valley and famous Kinnaur Kailash views.
               </p>
               <p>
-                Guests come for comfortable rooms, all-day mountain scenery and genuine hospitality. The terrace,
-                balconies and windows open towards the snow line, while apple orchards and village lanes bring a calm,
-                authentic feel to the stay.
+                Guests come for comfortable rooms, all-day mountain scenery and genuine hospitality.
+                The terrace, balconies and windows open towards the snow line, while apple orchards
+                and village lanes bring a calm, authentic feel to the stay.
               </p>
               <p>
-                Our warm rooms and homemade Himachali and Kinnauri food make a practical base for families, couples and
-                road-trippers. Vegetarian meals, breakfast and simple local dishes are prepared in our own kitchen for
-                travellers returning from valley walks and nearby attractions.
+                Our warm rooms and homemade Himachali and Kinnauri food make a practical base for
+                families, couples and road-trippers. Vegetarian meals, breakfast and simple local
+                dishes are prepared in our own kitchen for travellers returning from valley walks
+                and nearby attractions.
               </p>
               <p>
-                Staying in Kalpa lets you enjoy dramatic Himalayan views at a slower pace. KinVatika is also a useful
-                base near Reckong Peo, Kalpa village and the scenic roads of Kinnaur.
+                Staying in Kalpa lets you enjoy dramatic Himalayan views at a slower pace. KinVatika
+                is also a useful base near Reckong Peo, Kalpa village and the scenic roads of
+                Kinnaur.
               </p>
             </div>
           </Reveal>
@@ -452,8 +445,8 @@ function Home() {
             <h2 className="mt-4 text-4xl sm:text-5xl">Received like family, not like a booking</h2>
             <p className="mt-6 text-[0.95rem] leading-loose text-muted-foreground">
               A cup of tea on arrival, a room warmed before you reach it, dinner served when you are
-              hungry rather than when a kitchen closes. Our family has lived in Kinnaur for
-              years, and the homestay is hosted with the warmth and care of a family home.
+              hungry rather than when a kitchen closes. Our family has lived in Kinnaur for years,
+              and the homestay is hosted with the warmth and care of a family home.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-charcoal/80">
               <li>· Welcome tea and local apples</li>
@@ -617,7 +610,9 @@ function Home() {
               />
               <div className="p-7">
                 <h3 className="text-2xl">Kinnaur Kailash Viewpoint</h3>
-                <p className="mt-2 text-xs tracking-widest text-gold uppercase">Scenic mountain viewpoint</p>
+                <p className="mt-2 text-xs tracking-widest text-gold uppercase">
+                  Scenic mountain viewpoint
+                </p>
               </div>
             </article>
           </Reveal>
@@ -631,7 +626,9 @@ function Home() {
               />
               <div className="p-7">
                 <h3 className="text-2xl">Kalpa Village</h3>
-                <p className="mt-2 text-xs tracking-widest text-gold uppercase">Village lanes and local culture</p>
+                <p className="mt-2 text-xs tracking-widest text-gold uppercase">
+                  Village lanes and local culture
+                </p>
               </div>
             </article>
           </Reveal>
@@ -645,11 +642,68 @@ function Home() {
               />
               <div className="p-7">
                 <h3 className="text-2xl">Suicide Point, Roghi</h3>
-                <p className="mt-2 text-xs tracking-widest text-gold uppercase">Scenic road through the valley</p>
+                <p className="mt-2 text-xs tracking-widest text-gold uppercase">
+                  Scenic road through the valley
+                </p>
               </div>
             </article>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Featured Guest Reviews */}
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+        <Reveal className="flex flex-wrap items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 text-gold">
+              <span className="font-display text-2xl font-bold text-forest">5.0</span>
+              <span className="text-lg">★★★★★</span>
+              <span className="text-xs tracking-wider text-muted-foreground uppercase">
+                (160+ Reviews on Google)
+              </span>
+            </div>
+            <h2 className="mt-3 text-4xl sm:text-5xl">Loved by Guests From Across the World</h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              {REVIEWS_OVERVIEW.geminiSummary}
+            </p>
           </div>
+          <Link
+            to="/reviews"
+            className="rounded-full bg-pine px-7 py-3 text-[0.72rem] tracking-widest text-snow uppercase transition hover:bg-forest hover:shadow-lift"
+          >
+            Read All 160+ Reviews
+          </Link>
+        </Reveal>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {ALL_REVIEWS.slice(0, 3).map((r, i) => (
+            <Reveal key={r.id} delay={i * 0.08}>
+              <div className="flex h-full flex-col justify-between rounded-3xl border border-border/70 bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex text-gold">
+                      {[0, 1, 2, 3, 4].map((star) => (
+                        <span key={star} className="text-sm">
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <span className="rounded-full bg-forest/5 px-2.5 py-0.5 text-[0.68rem] font-medium text-forest">
+                      {r.platform} Verified
+                    </span>
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-charcoal/85 line-clamp-4">
+                    “{r.text}”
+                  </p>
+                </div>
+                <div className="mt-6 border-t border-border/60 pt-4">
+                  <p className="font-display text-lg text-forest">{r.name}</p>
+                  <p className="text-xs text-muted-foreground">{r.date} · {r.tripType || "Guest"}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       {/* FAQ */}
@@ -662,13 +716,34 @@ function Home() {
           <Reveal delay={0.1} className="mt-12">
             <div className="w-full divide-y divide-border/80">
               {[
-                ["Where exactly is KinVatika Homestay?", "KinVatika Homestay is at Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Kinnaur, Himachal Pradesh – 172107. It is above Reckong Peo in the Kalpa area, not in central Reckong Peo."],
-                ["How do I book?", "Send your dates and guest details on WhatsApp at +91 99534 93171 or call the same number. The family can confirm availability, room options and current direct-booking rates."],
-                ["Is the homestay open during winter snowfall?", "KinVatika welcomes winter guests with heated rooms, warm bedding and hot water. Please check current road and weather conditions with the property before travelling during heavy snowfall."],
-                ["Is food included and are pets allowed?", "Homemade Himachali and Kinnauri meals are available on request; whether meals are included depends on the booking plan. Well-behaved pets may be accommodated when arranged in advance with the family."],
-                ["How do we reach Kalpa?", "Kalpa is reached by road via Reckong Peo from Shimla, Chandigarh or Delhi. Travellers usually come by private vehicle, taxi or bus to Reckong Peo and continue uphill to Kalpa; the hosts can share local route guidance."],
-                ["How far is KinVatika from Reckong Peo?", "KinVatika is in Village Shudharang, above Reckong Peo in the Kalpa area of Kinnaur. It offers access to the town while keeping the property in a quieter village setting."],
-                ["What attractions can guests visit near Kalpa?", "Guests can visit Kalpa village, Kinnaur Kailash viewpoints, local temples, apple orchards and the scenic road towards Roghi. Travel times vary with road and weather conditions, so the family can advise on the day."],
+                [
+                  "Where exactly is KinVatika Homestay?",
+                  "KinVatika Homestay is at Village Shudharang, Post Office & Tehsil Reckong Peo, Kalpa, Kinnaur, Himachal Pradesh – 172107. It is above Reckong Peo in the Kalpa area, not in central Reckong Peo.",
+                ],
+                [
+                  "How do I book?",
+                  "Send your dates and guest details on WhatsApp at +91 99534 93171 or call the same number. The family can confirm availability, room options and current direct-booking rates.",
+                ],
+                [
+                  "Is the homestay open during winter snowfall?",
+                  "KinVatika welcomes winter guests with heated rooms, warm bedding and hot water. Please check current road and weather conditions with the property before travelling during heavy snowfall.",
+                ],
+                [
+                  "Is food included and are pets allowed?",
+                  "Homemade Himachali and Kinnauri meals are available on request; whether meals are included depends on the booking plan. Well-behaved pets may be accommodated when arranged in advance with the family.",
+                ],
+                [
+                  "How do we reach Kalpa?",
+                  "Kalpa is reached by road via Reckong Peo from Shimla, Chandigarh or Delhi. Travellers usually come by private vehicle, taxi or bus to Reckong Peo and continue uphill to Kalpa; the hosts can share local route guidance.",
+                ],
+                [
+                  "How far is KinVatika from Reckong Peo?",
+                  "KinVatika is in Village Shudharang, above Reckong Peo in the Kalpa area of Kinnaur. It offers access to the town while keeping the property in a quieter village setting.",
+                ],
+                [
+                  "What attractions can guests visit near Kalpa?",
+                  "Guests can visit Kalpa village, Kinnaur Kailash viewpoints, local temples, apple orchards and the scenic road towards Roghi. Travel times vary with road and weather conditions, so the family can advise on the day.",
+                ],
               ].map(([question, answer]) => (
                 <article key={question} className="py-6 first:pt-0 last:pb-0">
                   <h3 className="text-lg text-forest">{question}</h3>
