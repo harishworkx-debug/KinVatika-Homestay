@@ -10,7 +10,7 @@ function prepareDist() {
   fs.mkdirSync(target, { recursive: true });
   fs.cpSync(source, target, { recursive: true, force: true });
 
-  // Ensure index.html exists for static hosting providers like Render
+  // Locate the bundled CSS and JS files
   const assetsDir = path.join(target, "assets");
   let cssFile = "";
   let jsFile = "";
@@ -21,9 +21,10 @@ function prepareDist() {
     jsFile = files.find((f) => f.startsWith("index-") && f.endsWith(".js")) || "";
   }
 
-  // TanStack Start client bundle expects window.$_TSR to exist for hydration.
-  // In a static SPA fallback context without SSR, we provide a valid fallback
-  // so the client router initializes gracefully and navigates to the requested route.
+  // TanStack Start client bundle expects window.$_TSR and window.__TSS_START_OPTIONS__
+  // to exist during hydration. In a static hosting environment like Render Static Site,
+  // we provide a complete bootstrap object so the client router initializes gracefully
+  // and mounts the application without runtime errors.
   const html = `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,6 +41,7 @@ function prepareDist() {
       (function() {
         self.$R = self.$R || {};
         self.$R["tsr"] = [];
+        self.__TSS_START_OPTIONS__ = { serializationAdapters: [] };
         self.$_TSR = {
           buffer: [],
           initialized: true,
@@ -48,7 +50,9 @@ function prepareDist() {
           c: function() {},
           p: function(fn) { if (typeof fn === 'function') fn(); },
           router: {
-            manifest: {},
+            manifest: {
+              routes: {}
+            },
             matches: [],
             dehydratedData: undefined
           }
@@ -62,12 +66,43 @@ function prepareDist() {
   </body>
 </html>`;
 
+  // Write index.html, 200.html, and 404.html to root
   fs.writeFileSync(path.join(target, "index.html"), html, "utf8");
   fs.writeFileSync(path.join(target, "200.html"), html, "utf8");
   fs.writeFileSync(path.join(target, "404.html"), html, "utf8");
   fs.writeFileSync(path.join(source, "index.html"), html, "utf8");
 
-  console.log("Successfully prepared dist/client and index.html for static deployment");
+  // Pre-generate static HTML directories for all defined app routes
+  const knownRoutes = [
+    "about",
+    "attractions",
+    "blog",
+    "book",
+    "contact",
+    "dining",
+    "experience",
+    "family-homestay-in-kalpa",
+    "gallery",
+    "homestay-in-kalpa",
+    "homestay-in-kinnaur",
+    "homestay-in-reckong-peo",
+    "homestay-in-shudharang",
+    "homestay-near-kinnaur-kailash",
+    "kalpa-travel-guide",
+    "kinnaur-kailash-travel-guide",
+    "mountain-view-homestay-kalpa",
+    "reviews",
+    "rooms",
+    "things-to-do-in-kalpa"
+  ];
+
+  for (const route of knownRoutes) {
+    const routeDir = path.join(target, route);
+    fs.mkdirSync(routeDir, { recursive: true });
+    fs.writeFileSync(path.join(routeDir, "index.html"), html, "utf8");
+  }
+
+  console.log("Successfully prepared dist/client, route directories, and index.html for static deployment");
 }
 
 prepareDist();
