@@ -1,9 +1,11 @@
 import fs from "fs";
 import path from "path";
+import { pathToFileURL } from "url";
 
-function prepareDist() {
+async function prepareDist() {
   const source = ".output/public";
   const target = "dist/client";
+  const serverDir = ".output/server";
 
   if (!fs.existsSync(source)) return;
 
@@ -21,10 +23,44 @@ function prepareDist() {
     jsFile = files.find((f) => f.startsWith("index-") && f.endsWith(".js")) || "";
   }
 
-  // TanStack Start client bundle expects window.$_TSR and window.__TSS_START_OPTIONS__
-  // to exist during hydration. In a static hosting environment like Render Static Site,
-  // we provide a complete bootstrap object so the client router initializes gracefully
-  // and mounts the application without runtime errors.
+  // Load the real TanStack Start manifest generated during build
+  let manifest = { routes: {} };
+  if (fs.existsSync(serverDir)) {
+    const serverFiles = fs.readdirSync(serverDir);
+    const manifestFile = serverFiles.find(
+      (f) => f.startsWith("_tanstack-start-manifest") && f.endsWith(".mjs"),
+    );
+    if (manifestFile) {
+      try {
+        const manifestPath = path.resolve(serverDir, manifestFile);
+        const mod = await import(pathToFileURL(manifestPath).href);
+        if (typeof mod.tsrStartManifest === "function") {
+          manifest = mod.tsrStartManifest();
+        }
+      } catch (err) {
+        console.warn("Could not load SSR manifest:", err);
+      }
+    }
+  }
+
+  // Ensure default fallback routes exist
+  if (!manifest.routes) {
+    manifest.routes = {};
+  }
+  const defaultRoute = { css: [], preloads: [], scripts: [] };
+  if (!manifest.routes.__root__) {
+    manifest.routes.__root__ = defaultRoute;
+  }
+  if (!manifest.routes["/"]) {
+    manifest.routes["/"] = defaultRoute;
+  }
+
+  const manifestJson = JSON.stringify(manifest);
+
+  // TanStack Start client bundle expects window.$_TSR, window.__TSS_START_OPTIONS__,
+  // and the SSR manifest to exist during hydration. In a static hosting environment
+  // like Render Static Site, we provide the full build manifest and a proxy fallback
+  // so the client router initializes gracefully and mounts without runtime errors.
   const html = `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,6 +78,15 @@ function prepareDist() {
         self.$R = self.$R || {};
         self.$R["tsr"] = [];
         self.__TSS_START_OPTIONS__ = { serializationAdapters: [] };
+        var loadedManifest = ${manifestJson};
+        var routeFallback = { css: [], preloads: [], scripts: [] };
+        if (typeof Proxy !== "undefined" && loadedManifest && loadedManifest.routes) {
+          loadedManifest.routes = new Proxy(loadedManifest.routes, {
+            get: function(target, prop) {
+              return prop in target ? target[prop] : routeFallback;
+            }
+          });
+        }
         self.$_TSR = {
           buffer: [],
           initialized: true,
@@ -50,9 +95,7 @@ function prepareDist() {
           c: function() {},
           p: function(fn) { if (typeof fn === 'function') fn(); },
           router: {
-            manifest: {
-              routes: {}
-            },
+            manifest: loadedManifest,
             matches: [],
             dehydratedData: undefined
           }
@@ -93,7 +136,7 @@ function prepareDist() {
     "mountain-view-homestay-kalpa",
     "reviews",
     "rooms",
-    "things-to-do-in-kalpa"
+    "things-to-do-in-kalpa",
   ];
 
   for (const route of knownRoutes) {
@@ -102,7 +145,9 @@ function prepareDist() {
     fs.writeFileSync(path.join(routeDir, "index.html"), html, "utf8");
   }
 
-  console.log("Successfully prepared dist/client, route directories, and index.html for static deployment");
+  console.log(
+    "Successfully prepared dist/client, manifest hydration, route directories, and index.html for static deployment",
+  );
 }
 
 prepareDist();
